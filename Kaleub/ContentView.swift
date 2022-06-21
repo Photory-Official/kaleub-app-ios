@@ -10,7 +10,11 @@ import KaleubSDK
 
 struct ContentView: View {
     var body: some View {
-        SignUpView()
-            .environmentObject(SignUpViewModel())
+        VStack {
+//            SignInView()
+            
+            SignUpView()
+                .environmentObject(SignUpViewModel())
+        }
     }
 }
