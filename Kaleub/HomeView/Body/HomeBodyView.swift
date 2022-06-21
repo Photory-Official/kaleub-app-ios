@@ -8,8 +8,10 @@
 import SwiftUI
 
 struct HomeBodyView: View {
+    
+    
     var body: some View {
-        Text("MY PHOTO")
+        Text("")
     }
 }
 

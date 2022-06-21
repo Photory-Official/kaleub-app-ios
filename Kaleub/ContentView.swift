@@ -17,16 +17,18 @@ struct ContentView: View {
 //                .environmentObject(SignUpViewModel())
 //            AuthenticationButton(.signUp)
             
-            NavigationView {
-                HomeView()
-                    .toolbar {
-                        ToolbarItem(placement: .principal) {
-                            Image("app.logo")
-                                .resizable()
-                                .frame(width: 114, height: 32, alignment: .center)
-                        }
-                    }
-            }
+//            NavigationView {
+//                HomeView()
+//                    .toolbar {
+//                        ToolbarItem(placement: .principal) {
+//                            Image("app.logo")
+//                                .resizable()
+//                                .frame(width: 114, height: 32, alignment: .center)
+//                        }
+//                    }
+//            }
+            
+            HomeBodyView()
         }
     }
 }
