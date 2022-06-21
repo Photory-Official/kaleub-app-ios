@@ -18,7 +18,7 @@ struct SignUpFieldView: View {
             HStack {
                 VStack(alignment: .leading, spacing: 4) {
                     HStack(alignment: .bottom) {
-                        TextFieldView("아이디(이메일 주소)", $viewModel.email)
+                        TextFieldView("이름 (닉네임)", $viewModel.email)
                         
                         Image("button")
                             .overlay {
