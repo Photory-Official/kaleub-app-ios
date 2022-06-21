@@ -9,6 +9,11 @@
 /* Begin PBXBuildFile section */
 		A9F0AB6B285B2732001171F1 /* KaleubSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B1FDB066285A284F00B72846 /* KaleubSDK.framework */; };
 		A9F0AB6C285B2732001171F1 /* KaleubSDK.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B1FDB066285A284F00B72846 /* KaleubSDK.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		B1D799F528617A740035661C /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1D799F428617A740035661C /* SignUpView.swift */; };
+		B1D799F8286189600035661C /* TextFieldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1D799F7286189600035661C /* TextFieldView.swift */; };
+		B1D799FA28618A620035661C /* SignUpFieldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1D799F928618A620035661C /* SignUpFieldView.swift */; };
+		B1D799FC28618A8F0035661C /* SignUpViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1D799FB28618A8F0035661C /* SignUpViewModel.swift */; };
+		B1D79A0128618C0C0035661C /* BackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1D79A0028618C0C0035661C /* BackgroundView.swift */; };
 		B1FDB04A285A063300B72846 /* KaleubApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1FDB049285A063300B72846 /* KaleubApp.swift */; };
 		B1FDB04C285A063300B72846 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1FDB04B285A063300B72846 /* ContentView.swift */; };
 		B1FDB04E285A063400B72846 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B1FDB04D285A063400B72846 /* Assets.xcassets */; };
@@ -30,6 +35,11 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		B1D799F428617A740035661C /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
+		B1D799F7286189600035661C /* TextFieldView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldView.swift; sourceTree = "<group>"; };
+		B1D799F928618A620035661C /* SignUpFieldView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpFieldView.swift; sourceTree = "<group>"; };
+		B1D799FB28618A8F0035661C /* SignUpViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewModel.swift; sourceTree = "<group>"; };
+		B1D79A0028618C0C0035661C /* BackgroundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundView.swift; sourceTree = "<group>"; };
 		B1FDB046285A063300B72846 /* Kaleub.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Kaleub.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B1FDB049285A063300B72846 /* KaleubApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KaleubApp.swift; sourceTree = "<group>"; };
 		B1FDB04B285A063300B72846 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -50,6 +60,33 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B1D799F328617A1C0035661C /* Auth */ = {
+			isa = PBXGroup;
+			children = (
+				B1D79A0228618D710035661C /* SignUp */,
+			);
+			name = Auth;
+			sourceTree = "<group>";
+		};
+		B1D799F6286189500035661C /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				B1D799F7286189600035661C /* TextFieldView.swift */,
+				B1D79A0028618C0C0035661C /* BackgroundView.swift */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		B1D79A0228618D710035661C /* SignUp */ = {
+			isa = PBXGroup;
+			children = (
+				B1D799FB28618A8F0035661C /* SignUpViewModel.swift */,
+				B1D799F428617A740035661C /* SignUpView.swift */,
+				B1D799F928618A620035661C /* SignUpFieldView.swift */,
+			);
+			name = SignUp;
+			sourceTree = "<group>";
+		};
 		B1FDB03D285A063300B72846 = {
 			isa = PBXGroup;
 			children = (
@@ -72,6 +109,8 @@
 			children = (
 				B1FDB049285A063300B72846 /* KaleubApp.swift */,
 				B1FDB04B285A063300B72846 /* ContentView.swift */,
+				B1D799F6286189500035661C /* Common */,
+				B1D799F328617A1C0035661C /* Auth */,
 				B1FDB04D285A063400B72846 /* Assets.xcassets */,
 				B1FDB04F285A063400B72846 /* Preview Content */,
 			);
@@ -166,6 +205,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				B1FDB04C285A063300B72846 /* ContentView.swift in Sources */,
+				B1D799FA28618A620035661C /* SignUpFieldView.swift in Sources */,
+				B1D79A0128618C0C0035661C /* BackgroundView.swift in Sources */,
+				B1D799F528617A740035661C /* SignUpView.swift in Sources */,
+				B1D799F8286189600035661C /* TextFieldView.swift in Sources */,
+				B1D799FC28618A8F0035661C /* SignUpViewModel.swift in Sources */,
 				B1FDB04A285A063300B72846 /* KaleubApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

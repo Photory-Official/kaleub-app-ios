@@ -9,16 +9,8 @@ import SwiftUI
 import KaleubSDK
 
 struct ContentView: View {
-//    let t = APIClient().urlString
     var body: some View {
-        Text("text")
-            .padding()
-        Text("Text")
+        SignUpView()
+            .environmentObject(SignUpViewModel())
     }
 }
-
-//struct ContentView_Previews: PreviewProvider {
-//    static var previews: some View {
-//        ContentView()
-//    }
-//}
