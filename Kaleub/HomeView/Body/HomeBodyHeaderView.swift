@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct BodyHeaderView: View {
+struct HomeBodyHeaderView: View {
     @State var state: SearchState = .close
     @State var text: String = ""
     
@@ -17,9 +17,8 @@ struct BodyHeaderView: View {
     }
     
     var body: some View {
-        HStack {
+        HStack(alignment: .center) {
             Text("MY PHOTO")
-                .padding(.leading, 16)
             
             Spacer()
             
@@ -31,7 +30,7 @@ struct BodyHeaderView: View {
                         .resizable()
                 }
                 .frame(width: 24, height: 24)
-                .padding(.trailing, 32)
+                .padding(.trailing, 16)
             } else {
                 ZStack(alignment: .trailing) {
                     TextFieldView("검색", $text)
@@ -44,7 +43,7 @@ struct BodyHeaderView: View {
                             .foregroundColor(.gray)
                     }
                 }
-                .padding(.trailing, 32)
+                .padding(.trailing, 16)
             }
         }
     }
@@ -52,6 +51,6 @@ struct BodyHeaderView: View {
 
 struct BodyHeaderView_Previews: PreviewProvider {
     static var previews: some View {
-        BodyHeaderView()
+        HomeBodyHeaderView()
     }
 }
