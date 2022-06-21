@@ -20,7 +20,7 @@ struct HomeBodyGridView: View {
     
     var body: some View {
         RoundedRectangle(cornerRadius: 25.0)
-            .foregroundColor(.blue)
+            .foregroundColor(ColorSet.primary)
             .frame(height: 175)
             .overlay {
                 VStack(alignment: .leading) {

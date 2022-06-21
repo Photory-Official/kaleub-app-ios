@@ -9,8 +9,6 @@ import SwiftUI
 
 struct HomeHeaderView: View {
     // NOTE: 피그마에서 어떤 색을 차용해야하는지, 확실치 않아서 colorLiteral로 스포이드!
-    let fillColor = Color(#colorLiteral(red: 0.9019607902, green: 0.9019607902, blue: 0.9019607902, alpha: 1))
-    let shadowColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.26)
     
     var body: some View {
         VStack(alignment: .center) {
@@ -40,7 +38,7 @@ struct HomeHeaderView: View {
             .padding(.leading, 12)
             .background {
                 RoundedRectangle(cornerRadius: 10)
-                    .fill(fillColor)
+                    .fill(ColorSet.primary)
                     .frame(height: 100)
                     .shadow(color: .black, radius: 4, x: 0, y: 4)
             }

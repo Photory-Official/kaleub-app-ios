@@ -12,12 +12,16 @@ struct HomeView: View {
     var body: some View {
         VStack {
             HomeHeaderView()
+                .padding(.top, 36)
+                .padding(.bottom, 18)
             
             HomeBodyView()
                 .environmentObject(HomeBodyViewModel())
         }
+        
     }
 }
+
 
 struct HomeView_Previews: PreviewProvider {
     static var previews: some View {

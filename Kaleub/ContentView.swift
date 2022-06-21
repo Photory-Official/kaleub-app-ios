@@ -10,25 +10,18 @@ import KaleubSDK
 
 struct ContentView: View {
     var body: some View {
-        VStack {
-//            SignInView()
+        
+        // FIXME: - NavigationView 연결해야 하는데, 잘못된 UI가 나타남. 해결책 아직 못찾음
+        ZStack {
+            Image("app.background")
+                .resizable()
+                .aspectRatio(contentMode: .fill)
+                .clipped()
             
-//            SignUpView()
-//                .environmentObject(SignUpViewModel())
-//            AuthenticationButton(.signUp)
             
-//            NavigationView {
-//                HomeView()
-//                    .toolbar {
-//                        ToolbarItem(placement: .principal) {
-//                            Image("app.logo")
-//                                .resizable()
-//                                .frame(width: 114, height: 32, alignment: .center)
-//                        }
-//                    }
-//            }
+            HomeView()
             
-            HomeBodyView()
         }
+        
     }
 }
