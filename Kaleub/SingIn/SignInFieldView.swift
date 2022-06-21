@@ -19,6 +19,7 @@ struct SignInFieldView: View {
                 
                 TextFieldView("비밀번호", $password)
                     .padding([.horizontal], 20)
+            
                 
             
         }

@@ -15,6 +15,7 @@ struct ContentView: View {
             
             SignUpView()
                 .environmentObject(SignUpViewModel())
+//            AuthenticationButton(.signUp)
         }
     }
 }

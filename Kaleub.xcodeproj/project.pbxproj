@@ -17,6 +17,7 @@
 		B1D79A0528618DC80035661C /* SignInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1D79A0428618DC80035661C /* SignInView.swift */; };
 		B1D79A0728618E810035661C /* SignInFieldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1D79A0628618E810035661C /* SignInFieldView.swift */; };
 		B1D79A092861902C0035661C /* SignHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1D79A082861902C0035661C /* SignHeaderView.swift */; };
+		B1D79A0B286193810035661C /* AuthenticationButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1D79A0A286193810035661C /* AuthenticationButton.swift */; };
 		B1FDB04A285A063300B72846 /* KaleubApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1FDB049285A063300B72846 /* KaleubApp.swift */; };
 		B1FDB04C285A063300B72846 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1FDB04B285A063300B72846 /* ContentView.swift */; };
 		B1FDB04E285A063400B72846 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B1FDB04D285A063400B72846 /* Assets.xcassets */; };
@@ -46,6 +47,7 @@
 		B1D79A0428618DC80035661C /* SignInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInView.swift; sourceTree = "<group>"; };
 		B1D79A0628618E810035661C /* SignInFieldView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInFieldView.swift; sourceTree = "<group>"; };
 		B1D79A082861902C0035661C /* SignHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignHeaderView.swift; sourceTree = "<group>"; };
+		B1D79A0A286193810035661C /* AuthenticationButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationButton.swift; sourceTree = "<group>"; };
 		B1FDB046285A063300B72846 /* Kaleub.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Kaleub.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B1FDB049285A063300B72846 /* KaleubApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KaleubApp.swift; sourceTree = "<group>"; };
 		B1FDB04B285A063300B72846 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -70,6 +72,7 @@
 			isa = PBXGroup;
 			children = (
 				B1D79A082861902C0035661C /* SignHeaderView.swift */,
+				B1D79A0A286193810035661C /* AuthenticationButton.swift */,
 				B1D79A0328618DBB0035661C /* SingIn */,
 				B1D79A0228618D710035661C /* SignUp */,
 			);
@@ -224,6 +227,7 @@
 				B1FDB04C285A063300B72846 /* ContentView.swift in Sources */,
 				B1D799FA28618A620035661C /* SignUpFieldView.swift in Sources */,
 				B1D79A0728618E810035661C /* SignInFieldView.swift in Sources */,
+				B1D79A0B286193810035661C /* AuthenticationButton.swift in Sources */,
 				B1D79A0128618C0C0035661C /* BackgroundView.swift in Sources */,
 				B1D799F528617A740035661C /* SignUpView.swift in Sources */,
 				B1D799F8286189600035661C /* TextFieldView.swift in Sources */,

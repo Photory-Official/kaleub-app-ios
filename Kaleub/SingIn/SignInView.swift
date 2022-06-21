@@ -18,7 +18,11 @@ struct SignInView: View {
                 
                 SignInFieldView()
                 
+                AuthenticationButton(.signIn)
+                    .padding(.top, 284)
+
                 Spacer()
+                                    
             }
         }
     }

@@ -15,6 +15,7 @@ struct SignUpView: View {
             BackgroundView("background")
             
             SignUpFieldView()
+            
         }
     }
 }

@@ -51,6 +51,12 @@ struct SignUpFieldView: View {
             
             // TODO: 인증 번호 필드 디자인 개편중
             Spacer()
+                .frame(height: 284)
+            
+            AuthenticationButton(.signUp)
+                
+            
+            Spacer()
         }
     }
 }
