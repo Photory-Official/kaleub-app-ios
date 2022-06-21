@@ -13,9 +13,20 @@ struct ContentView: View {
         VStack {
 //            SignInView()
             
-            SignUpView()
-                .environmentObject(SignUpViewModel())
+//            SignUpView()
+//                .environmentObject(SignUpViewModel())
 //            AuthenticationButton(.signUp)
+            
+            NavigationView {
+                HomeView()
+                    .toolbar {
+                        ToolbarItem(placement: .principal) {
+                            Image("app.logo")
+                                .resizable()
+                                .frame(width: 114, height: 32, alignment: .center)
+                        }
+                    }
+            }
         }
     }
 }
