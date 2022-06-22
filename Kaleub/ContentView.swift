@@ -12,15 +12,16 @@ struct ContentView: View {
     var body: some View {
         
         // FIXME: - NavigationView 연결해야 하는데, 잘못된 UI가 나타남. 해결책 아직 못찾음
-        ZStack {
-            Image("app.background")
-                .resizable()
-                .aspectRatio(contentMode: .fill)
-                .clipped()
-            
-            
-            HomeView()
-            
+        NavigationView {
+            ZStack {
+                BackgroundView("app.background")
+                    .frame(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height)
+                    
+                HomeView()
+                
+            }
+            .navigationTitle(Text("AAA"))
+            .navigationBarTitleDisplayMode(.inline)
         }
         
     }

@@ -8,7 +8,5 @@
 import Foundation
 
 class HomeBodyViewModel: ObservableObject {
-    @Published var title: String = ""
-    @Published var date: String = ""
-    @Published var participantsCount: Int = 1
+    // TODO: 데이터를 연결해서 처리합니다.
 }

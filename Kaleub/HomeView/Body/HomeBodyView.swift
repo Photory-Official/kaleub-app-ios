@@ -29,27 +29,26 @@ struct HomeBodyView: View {
         VStack {
             HomeBodyHeaderView()
             
+            // TODO: 나중에 실제 데이터 연결하고 if문으로 LazyVGrid와 감쌉니다.
+            Image("app.empty")
+                .resizable()
+                .aspectRatio(contentMode: .fill)
+                .clipped()
+            
             ScrollView {
                 LazyVGrid(columns: type.columns) {
+                    // TODO: 데이터 연결하고 ForEach로 변경합니다.
                     HomeBodyGridView(
                         title: "그 해 우리는",
                         date: "3.3.3",
                         participantsCount: 1
                     )
-                    HomeBodyGridView(
-                        title: "그 해 1",
-                        date: "1.1.1",
-                        participantsCount: 10
-                    )
-                    HomeBodyGridView(
-                        title: "그 해 우리는",
-                        date: "2.2.2",
-                        participantsCount: 12
-                    )
                 }
             }
+            .shadow(color: Color(ColorSet.shadowColor), radius: 4, x: 0, y: 4)
         }
         .padding([.horizontal], 16)
+        
     }
 }
 
