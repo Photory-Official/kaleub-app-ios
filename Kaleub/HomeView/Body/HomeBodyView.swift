@@ -58,7 +58,9 @@ struct HomeBodyView: View {
             Spacer()
         }
         .padding([.horizontal], 16)
-        
+        .onAppear {
+            viewModel.isShowingPopUpView.toggle()
+        }
     }
 }
 
