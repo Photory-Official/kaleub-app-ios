@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		A9F0AB6B285B2732001171F1 /* KaleubSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B1FDB066285A284F00B72846 /* KaleubSDK.framework */; };
 		A9F0AB6C285B2732001171F1 /* KaleubSDK.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B1FDB066285A284F00B72846 /* KaleubSDK.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		B16E62FD286371AC005E0984 /* HomeBodyFloatingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B16E62FC286371AC005E0984 /* HomeBodyFloatingView.swift */; };
+		B16E630028637354005E0984 /* HomeBodyPopUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B16E62FF28637354005E0984 /* HomeBodyPopUpView.swift */; };
 		B1D799F528617A740035661C /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1D799F428617A740035661C /* SignUpView.swift */; };
 		B1D799F8286189600035661C /* TextFieldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1D799F7286189600035661C /* TextFieldView.swift */; };
 		B1D799FA28618A620035661C /* SignUpFieldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1D799F928618A620035661C /* SignUpFieldView.swift */; };
@@ -45,6 +47,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		B16E62FC286371AC005E0984 /* HomeBodyFloatingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeBodyFloatingView.swift; sourceTree = "<group>"; };
+		B16E62FF28637354005E0984 /* HomeBodyPopUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeBodyPopUpView.swift; sourceTree = "<group>"; };
 		B1D799F428617A740035661C /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
 		B1D799F7286189600035661C /* TextFieldView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldView.swift; sourceTree = "<group>"; };
 		B1D799F928618A620035661C /* SignUpFieldView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpFieldView.swift; sourceTree = "<group>"; };
@@ -80,6 +84,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B16E62FE28637267005E0984 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				B1D79A172861B32B0035661C /* HomeBodyHeaderView.swift */,
+				B1D79A192861BAA90035661C /* HomeBodyGridView.swift */,
+				B16E62FC286371AC005E0984 /* HomeBodyFloatingView.swift */,
+				B16E62FF28637354005E0984 /* HomeBodyPopUpView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		B1D799F328617A1C0035661C /* Auth */ = {
 			isa = PBXGroup;
 			children = (
@@ -143,8 +158,7 @@
 			children = (
 				B1D79A1B2861BACA0035661C /* HomeBodyViewModel.swift */,
 				B1D79A132861AC590035661C /* HomeBodyView.swift */,
-				B1D79A172861B32B0035661C /* HomeBodyHeaderView.swift */,
-				B1D79A192861BAA90035661C /* HomeBodyGridView.swift */,
+				B16E62FE28637267005E0984 /* Views */,
 			);
 			path = Body;
 			sourceTree = "<group>";
@@ -270,9 +284,11 @@
 				B1D799FA28618A620035661C /* SignUpFieldView.swift in Sources */,
 				B1D79A102861A11B0035661C /* HomeHeaderView.swift in Sources */,
 				B1D79A1E2861EE5A0035661C /* ColorSet.swift in Sources */,
+				B16E630028637354005E0984 /* HomeBodyPopUpView.swift in Sources */,
 				B1D79A0728618E810035661C /* SignInFieldView.swift in Sources */,
 				B1D79A0B286193810035661C /* AuthenticationButton.swift in Sources */,
 				B1D79A182861B32B0035661C /* HomeBodyHeaderView.swift in Sources */,
+				B16E62FD286371AC005E0984 /* HomeBodyFloatingView.swift in Sources */,
 				B1D79A0128618C0C0035661C /* BackgroundView.swift in Sources */,
 				B1D799F528617A740035661C /* SignUpView.swift in Sources */,
 				B1D79A1A2861BAA90035661C /* HomeBodyGridView.swift in Sources */,
