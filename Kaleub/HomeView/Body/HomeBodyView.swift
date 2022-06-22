@@ -26,34 +26,52 @@ struct HomeBodyView: View {
     }
     
     var body: some View {
-        VStack {
+        VStack(alignment: .trailing) {
             HomeBodyHeaderView()
             
-            // TODO: 나중에 실제 데이터 연결하고 if문으로 LazyVGrid와 감쌉니다.
-            Image("app.empty")
-                .resizable()
-                .aspectRatio(contentMode: .fill)
-                .clipped()
-            
-            ScrollView {
-                LazyVGrid(columns: type.columns) {
-                    // TODO: 데이터 연결하고 ForEach로 변경합니다.
-                    HomeBodyGridView(
-                        title: "그 해 우리는",
-                        date: "3.3.3",
-                        participantsCount: 1
-                    )
-                }
+            ZStack {
+                Image("app.empty")
+                    .resizable()
+                    .aspectRatio(contentMode: .fit)
+                    .clipped()
+                
+                Spacer()
+                
+//                ScrollView {
+//                     //TODO: 나중에 실제 데이터 연결하고 if문으로 LazyVGrid와 감쌉니다.
+//                    LazyVGrid(columns: type.columns) {
+//                        // TODO: 데이터 연결하고 ForEach로 변경합니다.
+//                        HomeBodyGridView(
+//                            title: "그 해 우리는",
+//                            date: "3.3.3",
+//                            participantsCount: 1
+//                        )
+//                    }
+//                }
+                .shadow(color: Color(ColorSet.shadowColor), radius: 4, x: 0, y: 4)
             }
-            .shadow(color: Color(ColorSet.shadowColor), radius: 4, x: 0, y: 4)
+            
+            Spacer()
+            
+            Button {
+                // TODO: 버튼 나와야 한다.
+            } label: {
+                Image("app.floating_button")
+                    .resizable()
+                    .frame(width: 62, height: 62)
+            }
+            .padding()
+
         }
         .padding([.horizontal], 16)
         
+        // app_floating_button
     }
 }
 
 struct HomeBodyView_Previews: PreviewProvider {
     static var previews: some View {
         HomeBodyView()
+            .frame(height: 400)
     }
 }

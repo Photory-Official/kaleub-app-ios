@@ -17,7 +17,7 @@ struct BackgroundView: View {
     var body: some View {
         Image(name)
             .resizable()
-            .aspectRatio(contentMode: .fill)
+            .aspectRatio(contentMode: .fit)
             .clipped()
     }
 }

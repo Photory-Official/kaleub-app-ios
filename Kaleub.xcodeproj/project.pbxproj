@@ -26,7 +26,6 @@
 		B1D79A1C2861BACA0035661C /* HomeBodyViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1D79A1B2861BACA0035661C /* HomeBodyViewModel.swift */; };
 		B1D79A1E2861EE5A0035661C /* ColorSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1D79A1D2861EE5A0035661C /* ColorSet.swift */; };
 		B1FDB04A285A063300B72846 /* KaleubApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1FDB049285A063300B72846 /* KaleubApp.swift */; };
-		B1FDB04C285A063300B72846 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1FDB04B285A063300B72846 /* ContentView.swift */; };
 		B1FDB04E285A063400B72846 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B1FDB04D285A063400B72846 /* Assets.xcassets */; };
 		B1FDB051285A063400B72846 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B1FDB050285A063400B72846 /* Preview Assets.xcassets */; };
 /* End PBXBuildFile section */
@@ -64,7 +63,6 @@
 		B1D79A1D2861EE5A0035661C /* ColorSet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ColorSet.swift; path = ../../../../ColorSet.swift; sourceTree = "<group>"; };
 		B1FDB046285A063300B72846 /* Kaleub.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Kaleub.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B1FDB049285A063300B72846 /* KaleubApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KaleubApp.swift; sourceTree = "<group>"; };
-		B1FDB04B285A063300B72846 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		B1FDB04D285A063400B72846 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B1FDB050285A063400B72846 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		B1FDB066285A284F00B72846 /* KaleubSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = KaleubSDK.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -172,7 +170,6 @@
 			isa = PBXGroup;
 			children = (
 				B1FDB049285A063300B72846 /* KaleubApp.swift */,
-				B1FDB04B285A063300B72846 /* ContentView.swift */,
 				B1D799F328617A1C0035661C /* Auth */,
 				B1D79A0C2861A0A00035661C /* HomeView */,
 				B1D799F6286189500035661C /* Common */,
@@ -269,7 +266,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B1FDB04C285A063300B72846 /* ContentView.swift in Sources */,
 				B1D79A142861AC590035661C /* HomeBodyView.swift in Sources */,
 				B1D799FA28618A620035661C /* SignUpFieldView.swift in Sources */,
 				B1D79A102861A11B0035661C /* HomeHeaderView.swift in Sources */,

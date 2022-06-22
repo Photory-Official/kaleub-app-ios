@@ -40,7 +40,7 @@ struct HomeHeaderView: View {
                 RoundedRectangle(cornerRadius: 10)
                     .fill(ColorSet.primary)
                     .frame(height: 100)
-                    .shadow(color: .black, radius: 4, x: 0, y: 4)
+                    .shadow(color: Color(ColorSet.shadowColor), radius: 4, x: 0, y: 4)
             }
             .padding([.horizontal], 16)
         }
