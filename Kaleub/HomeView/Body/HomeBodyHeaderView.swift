@@ -34,6 +34,7 @@ struct HomeBodyHeaderView: View {
             } else {
                 ZStack(alignment: .trailing) {
                     TextFieldView("검색", $text)
+                        .frame(height: 24)
                     
                     Button {
                         state = .close
