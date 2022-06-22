@@ -8,39 +8,12 @@
 import SwiftUI
 
 struct HomeBodyPopUpView: View {
-    let type: PopUpType
+    @EnvironmentObject var viewModel: HomeBodyViewModel
     
     @State var name: String = ""
     @State var password: String = ""
-    
-    enum PopUpType {
-        case create
-        case join
-        
-        var item: [String] {
-            switch self {
-            case .create:
-                return [
-                    "CREATE THE ROOM",
-                    "새로운 방을 만들어\n친구를 초대하자!",
-                    "방 제목을 입력해 주세요. (4~6)",
-                    "비밀번호를 설정해주세요. (4~12)"
-                ]
-            case .join:
-                return [
-                    "JOIN THE ROOM",
-                    "친구들과 추억이 담긴 방\n참여해 볼 수 있어!",
-                    "초대코드를 입력해 주세요.",
-                    "비밀번호를 입력해 주세요.(4~12)"
-                ]
-            }
-        }
-    }
-    
-    init(_ type: PopUpType) {
-        self.type = type
-    }
-    
+
+
     /*  NOTE: background vs overlay
      background: 해당 뷰보다 뒤에 위치
      overlay: 해당 뷰보다 앞에 위치
@@ -53,11 +26,11 @@ struct HomeBodyPopUpView: View {
                 .foregroundColor(.white)
                 .overlay {
                     VStack(alignment: .center) {
-                        Text(type.item[0])
+                        Text(viewModel.popUpType.item[0])
                             .padding(.top, 20)
                             .padding(.bottom, 12)
                             .font(.system(size: 20))
-                        Text(type.item[1])
+                        Text(viewModel.popUpType.item[1])
                             .lineLimit(2)
                             .multilineTextAlignment(.center)
                             .font(.system(size: 16))
@@ -66,7 +39,7 @@ struct HomeBodyPopUpView: View {
                                 RoundedRectangle(cornerRadius: 10)
                                     .foregroundColor(ColorSet.primary)
                                     .background {
-                                        Text(type.item[2])
+                                        Text(viewModel.popUpType.item[2])
                                             .font(.system(size: 12))
                                     }
                             }
@@ -76,7 +49,7 @@ struct HomeBodyPopUpView: View {
                                 RoundedRectangle(cornerRadius: 10)
                                     .foregroundColor(ColorSet.primary)
                                     .background {
-                                        Text(type.item[3])
+                                        Text(viewModel.popUpType.item[3])
                                             .font(.system(size: 12))
                                     }
                             }
@@ -88,6 +61,7 @@ struct HomeBodyPopUpView: View {
             
             Button {
                 // TODO: cancel
+                viewModel.isShowingPopUpView.toggle()
             } label: {
                 Image("app.xmark")
                     .resizable()
@@ -101,6 +75,6 @@ struct HomeBodyPopUpView: View {
 
 struct HomeBodyPopUpView_Previews: PreviewProvider {
     static var previews: some View {
-        HomeBodyPopUpView(.create)
+        HomeBodyPopUpView()
     }
 }

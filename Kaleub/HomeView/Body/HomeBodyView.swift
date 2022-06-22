@@ -9,8 +9,7 @@ import SwiftUI
 
 struct HomeBodyView: View {
     @State var type: ColumsType = .standard
-    
-    @State var isShowing: Bool = true
+    @EnvironmentObject var viewModel: HomeBodyViewModel
     
     // NOTE: 나중에 UI도 리스트형, 컬렉션 형 등 자유롭게 제공하는 기능 추가 예정
     enum ColumsType: CaseIterable {
@@ -32,27 +31,30 @@ struct HomeBodyView: View {
         VStack {
             HomeBodyHeaderView()
             
-            
-            // MARK: - contents
-            
-            ScrollView {
-                LazyVGrid(columns: type.columns) {
-                    // TODO: 데이터 연결하고 ForEach로 변경합니다.
-                    
-                    HomeBodyGridView(
-                        title: "그 해 우리는",
-                        date: "3.3.3",
-                        participantsCount: 1
-                    )
+            ZStack {
+                // NOTE: viewModel에서 현재 여기 로직이 제대로 수행되지 않는다.
+                if viewModel.isShowingPopUpView {
+                    HomeBodyPopUpView()
                 }
-            }
-            .shadow(color: ColorSet.shadowColor, radius: 4, x: 0, y: 4)
-            .overlay {
-                HomeBodyFloatingView()
+                
+                ScrollView {
+                    LazyVGrid(columns: type.columns) {
+                        // TODO: 데이터 연결하고 ForEach로 변경합니다.
+                        
+    //                    HomeBodyGridView(
+    //                        title: "그 해 우리는",
+    //                        date: "3.3.3",
+    //                        participantsCount: 1
+    //                    )
+                    }
+                }
+                .shadow(color: ColorSet.shadowColor, radius: 4, x: 0, y: 4)
+                .overlay {
+                    HomeBodyFloatingView()
+                }
             }
             
             Divider()
-            
             Spacer()
         }
         .padding([.horizontal], 16)
@@ -63,6 +65,7 @@ struct HomeBodyView: View {
 struct HomeBodyView_Previews: PreviewProvider {
     static var previews: some View {
         HomeBodyView()
+            .environmentObject(HomeBodyViewModel())
         
     }
 }

@@ -8,15 +8,17 @@
 import SwiftUI
 
 struct HomeBodyFloatingView: View {
-    @State var isShowing: Bool = true
+    @EnvironmentObject var viewModel: HomeBodyViewModel
     
     var body: some View {
         VStack(alignment: .trailing) {
             Spacer()
             
-            if isShowing {
+            if viewModel.isShowingFloatingView {
                 Button {
-                    isShowing.toggle()
+                    viewModel.isShowingFloatingView.toggle()
+                    viewModel.popUpType = .join
+                    // TODO: 룸 참여 PopUpView 나타나게 하기
                 } label: {
                     RoundedRectangle(cornerRadius: 60)
                         .foregroundColor(ColorSet.primary)
@@ -28,13 +30,14 @@ struct HomeBodyFloatingView: View {
                 }
 
                 Button {
-                    isShowing.toggle()
+                    viewModel.isShowingFloatingView.toggle()
+                    viewModel.popUpType = .create
                 } label: {
                     RoundedRectangle(cornerRadius: 60)
                         .foregroundColor(ColorSet.primary)
                         .frame(width: 172, height: 48)
                         .overlay {
-                            Text("START A ROOM")
+                            Text("CREATE A ROOM")
                                 .foregroundColor(.black)
                         }
                 }
@@ -43,7 +46,7 @@ struct HomeBodyFloatingView: View {
             HStack {
                 Spacer()
                 Button {
-                    isShowing.toggle()
+                    viewModel.isShowingFloatingView.toggle()
                 } label: {
                     Image("app.floating_button")
                         .resizable()
