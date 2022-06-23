@@ -16,10 +16,7 @@ struct HomeBodyFloatingView: View {
             
             if viewModel.isShowingFloatingView {
                 Button {
-                    viewModel.isShowingFloatingView.toggle()
-                    viewModel.popUpType = .join
-                    viewModel.isShowingPopUpView.toggle()
-                    // TODO: 룸 참여 PopUpView 나타나게 하기
+                    didTapFloatingMenu(.join)
                 } label: {
                     RoundedRectangle(cornerRadius: 60)
                         .foregroundColor(ColorSet.primary)
@@ -29,11 +26,9 @@ struct HomeBodyFloatingView: View {
                                 .foregroundColor(.black)
                         }
                 }
-
+                
                 Button {
-                    viewModel.isShowingFloatingView.toggle()
-                    viewModel.popUpType = .create
-                    viewModel.isShowingPopUpView.toggle()
+                    didTapFloatingMenu(.create)
                 } label: {
                     RoundedRectangle(cornerRadius: 60)
                         .foregroundColor(ColorSet.primary)
@@ -47,8 +42,10 @@ struct HomeBodyFloatingView: View {
             
             HStack {
                 Spacer()
+                
                 Button {
-                    viewModel.isShowingFloatingView.toggle()
+                    viewModel.showingFloatingView()
+//                    viewModel.isShowingFloatingView = true
                 } label: {
                     Image("app.floating_button")
                         .resizable()
@@ -56,6 +53,13 @@ struct HomeBodyFloatingView: View {
                 }
             }
         }
+    }
+    
+    func didTapFloatingMenu(_ type: HomeBodyViewModel.PopUpType) {
+        viewModel.isShowingFloatingView = false
+        
+        viewModel.popUpType = type
+        viewModel.isShowingPopUpView = true
     }
 }
 

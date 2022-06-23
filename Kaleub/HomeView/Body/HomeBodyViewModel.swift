@@ -11,13 +11,19 @@ import Combine
 // NOTE: 실제 데이터를 viewModel로 연결하여 사용합니다.
 class HomeBodyViewModel: ObservableObject {
     /// HomeBodyFloatingView를 띄우는 변수
-    @Published var isShowingFloatingView: Bool = false
+    @Published var isShowingFloatingView: Bool = false {
+        didSet {
+            print("\(self) | \(self.isShowingFloatingView)")
+        }
+    }
     /// HomeBodyPopUpView를 띄우는 변수
-    @Published var isShowingPopUpView: Bool = false
+    @Published var isShowingPopUpView: Bool = false {
+        didSet {
+            print("\(self) | \(self.isShowingPopUpView)")
+        }
+    }
     /// HomeBodyPopUpView의 타입을 정하는 변수
     var popUpType: PopUpType = .create
-    
-    @Published var subject = CurrentValueSubject<Bool, Never>(false)
     
     enum PopUpType {
         case create
@@ -41,5 +47,11 @@ class HomeBodyViewModel: ObservableObject {
                 ]
             }
         }
+    }
+    
+    func showingFloatingView() {
+        isShowingFloatingView = isShowingPopUpView
+        ? false
+        : true
     }
 }

@@ -30,10 +30,12 @@ struct HomeBodyPopUpView: View {
                             .padding(.top, 20)
                             .padding(.bottom, 12)
                             .font(.system(size: 20))
+                        
                         Text(viewModel.popUpType.item[1])
                             .lineLimit(2)
                             .multilineTextAlignment(.center)
                             .font(.system(size: 16))
+                        
                         TextField("", text: $name)
                             .background {
                                 RoundedRectangle(cornerRadius: 10)
@@ -44,6 +46,7 @@ struct HomeBodyPopUpView: View {
                                     }
                             }
                             .padding([.horizontal], 27)
+                        
                         TextField("", text: $password)
                             .background {
                                 RoundedRectangle(cornerRadius: 10)
@@ -61,7 +64,7 @@ struct HomeBodyPopUpView: View {
             
             Button {
                 // TODO: cancel
-                viewModel.isShowingPopUpView.toggle()
+                viewModel.isShowingPopUpView = false
                 print("didTapTouchButton")
             } label: {
                 Image("app.xmark")
