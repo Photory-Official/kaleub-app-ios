@@ -18,6 +18,7 @@ struct HomeBodyFloatingView: View {
                 Button {
                     viewModel.isShowingFloatingView.toggle()
                     viewModel.popUpType = .join
+                    viewModel.isShowingPopUpView.toggle()
                     // TODO: 룸 참여 PopUpView 나타나게 하기
                 } label: {
                     RoundedRectangle(cornerRadius: 60)
@@ -32,6 +33,7 @@ struct HomeBodyFloatingView: View {
                 Button {
                     viewModel.isShowingFloatingView.toggle()
                     viewModel.popUpType = .create
+                    viewModel.isShowingPopUpView.toggle()
                 } label: {
                     RoundedRectangle(cornerRadius: 60)
                         .foregroundColor(ColorSet.primary)

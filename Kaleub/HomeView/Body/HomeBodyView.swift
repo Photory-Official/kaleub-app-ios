@@ -64,9 +64,6 @@ struct HomeBodyView: View {
             Spacer()
         }
         .padding([.horizontal], 16)
-        .onSubmit {
-            print("Submit")
-        }
         .onAppear {
             viewModel.isShowingPopUpView.toggle()
             
