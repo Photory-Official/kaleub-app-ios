@@ -56,8 +56,6 @@ struct HomeBodyView: View {
 
                     }
                 }
-                
-                
             }
             
             Divider()

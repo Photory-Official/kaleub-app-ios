@@ -12,13 +12,7 @@ struct HomeBodyPopUpView: View {
     
     @State var name: String = ""
     @State var password: String = ""
-
-
-    /*  NOTE: background vs overlay
-     background: 해당 뷰보다 뒤에 위치
-     overlay: 해당 뷰보다 앞에 위치
-     overlay하면 텍스트필드가 안먹힐 수 있다.
-     */
+    
     var body: some View {
         ZStack(alignment: .topLeading) {
             RoundedRectangle(cornerRadius: 20)
@@ -41,8 +35,10 @@ struct HomeBodyPopUpView: View {
                                 RoundedRectangle(cornerRadius: 10)
                                     .foregroundColor(ColorSet.primary)
                                     .background {
-                                        Text(viewModel.popUpType.item[2])
-                                            .font(.system(size: 12))
+                                        if name.isEmpty {
+                                            Text(viewModel.popUpType.item[2])
+                                                .font(.system(size: 12))
+                                        }
                                     }
                             }
                             .padding([.horizontal], 27)
@@ -52,8 +48,10 @@ struct HomeBodyPopUpView: View {
                                 RoundedRectangle(cornerRadius: 10)
                                     .foregroundColor(ColorSet.primary)
                                     .background {
-                                        Text(viewModel.popUpType.item[3])
-                                            .font(.system(size: 12))
+                                        if password.isEmpty {
+                                            Text(viewModel.popUpType.item[2])
+                                                .font(.system(size: 12))
+                                        }
                                     }
                             }
                             .padding([.horizontal], 27)
