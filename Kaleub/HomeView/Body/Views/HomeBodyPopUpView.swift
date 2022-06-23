@@ -30,7 +30,9 @@ struct HomeBodyPopUpView: View {
                             .multilineTextAlignment(.center)
                             .font(.system(size: 16))
                         
+                        // NOTE: TextField 자체에 placeholder 넣어도 되나, font 변경이 가능한 지에 대한 의문.
                         TextField("", text: $name)
+                            .multilineTextAlignment(.center)
                             .background {
                                 RoundedRectangle(cornerRadius: 10)
                                     .foregroundColor(ColorSet.primary)
@@ -44,6 +46,7 @@ struct HomeBodyPopUpView: View {
                             .padding([.horizontal], 27)
                         
                         TextField("", text: $password)
+                            .multilineTextAlignment(.center)
                             .background {
                                 RoundedRectangle(cornerRadius: 10)
                                     .foregroundColor(ColorSet.primary)
