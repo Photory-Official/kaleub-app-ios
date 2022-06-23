@@ -11,6 +11,8 @@
 		A9F0AB6C285B2732001171F1 /* KaleubSDK.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B1FDB066285A284F00B72846 /* KaleubSDK.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		B16E62FD286371AC005E0984 /* HomeBodyFloatingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B16E62FC286371AC005E0984 /* HomeBodyFloatingView.swift */; };
 		B16E630028637354005E0984 /* HomeBodyPopUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B16E62FF28637354005E0984 /* HomeBodyPopUpView.swift */; };
+		B18F39F52864D2D20016531D /* FeedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B18F39F42864D2D20016531D /* FeedView.swift */; };
+		B18F39F82864D3790016531D /* FeedHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B18F39F72864D3790016531D /* FeedHeaderView.swift */; };
 		B1D799F528617A740035661C /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1D799F428617A740035661C /* SignUpView.swift */; };
 		B1D799F8286189600035661C /* TextFieldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1D799F7286189600035661C /* TextFieldView.swift */; };
 		B1D799FA28618A620035661C /* SignUpFieldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1D799F928618A620035661C /* SignUpFieldView.swift */; };
@@ -49,6 +51,8 @@
 /* Begin PBXFileReference section */
 		B16E62FC286371AC005E0984 /* HomeBodyFloatingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeBodyFloatingView.swift; sourceTree = "<group>"; };
 		B16E62FF28637354005E0984 /* HomeBodyPopUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeBodyPopUpView.swift; sourceTree = "<group>"; };
+		B18F39F42864D2D20016531D /* FeedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedView.swift; sourceTree = "<group>"; };
+		B18F39F72864D3790016531D /* FeedHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedHeaderView.swift; sourceTree = "<group>"; };
 		B1D799F428617A740035661C /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
 		B1D799F7286189600035661C /* TextFieldView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldView.swift; sourceTree = "<group>"; };
 		B1D799F928618A620035661C /* SignUpFieldView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpFieldView.swift; sourceTree = "<group>"; };
@@ -93,6 +97,23 @@
 				B16E62FF28637354005E0984 /* HomeBodyPopUpView.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		B18F39F32864D2BB0016531D /* Feed */ = {
+			isa = PBXGroup;
+			children = (
+				B18F39F42864D2D20016531D /* FeedView.swift */,
+				B18F39F62864D36D0016531D /* Header */,
+			);
+			path = Feed;
+			sourceTree = "<group>";
+		};
+		B18F39F62864D36D0016531D /* Header */ = {
+			isa = PBXGroup;
+			children = (
+				B18F39F72864D3790016531D /* FeedHeaderView.swift */,
+			);
+			path = Header;
 			sourceTree = "<group>";
 		};
 		B1D799F328617A1C0035661C /* Auth */ = {
@@ -186,6 +207,7 @@
 				B1FDB049285A063300B72846 /* KaleubApp.swift */,
 				B1D799F328617A1C0035661C /* Auth */,
 				B1D79A0C2861A0A00035661C /* HomeView */,
+				B18F39F32864D2BB0016531D /* Feed */,
 				B1D799F6286189500035661C /* Common */,
 				B1FDB04D285A063400B72846 /* Assets.xcassets */,
 				B1FDB04F285A063400B72846 /* Preview Content */,
@@ -280,12 +302,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B18F39F52864D2D20016531D /* FeedView.swift in Sources */,
 				B1D79A142861AC590035661C /* HomeBodyView.swift in Sources */,
 				B1D799FA28618A620035661C /* SignUpFieldView.swift in Sources */,
 				B1D79A102861A11B0035661C /* HomeHeaderView.swift in Sources */,
 				B1D79A1E2861EE5A0035661C /* ColorSet.swift in Sources */,
 				B16E630028637354005E0984 /* HomeBodyPopUpView.swift in Sources */,
 				B1D79A0728618E810035661C /* SignInFieldView.swift in Sources */,
+				B18F39F82864D3790016531D /* FeedHeaderView.swift in Sources */,
 				B1D79A0B286193810035661C /* AuthenticationButton.swift in Sources */,
 				B1D79A182861B32B0035661C /* HomeBodyHeaderView.swift in Sources */,
 				B16E62FD286371AC005E0984 /* HomeBodyFloatingView.swift in Sources */,
