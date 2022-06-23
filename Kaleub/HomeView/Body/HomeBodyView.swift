@@ -33,9 +33,6 @@ struct HomeBodyView: View {
             
             ZStack {
                 // NOTE: viewModel에서 현재 여기 로직이 제대로 수행되지 않는다.
-                if viewModel.isShowingPopUpView {
-                    HomeBodyPopUpView()
-                }
                 
                 ScrollView {
                     LazyVGrid(columns: type.columns) {
@@ -50,17 +47,31 @@ struct HomeBodyView: View {
                 }
                 .shadow(color: ColorSet.shadowColor, radius: 4, x: 0, y: 4)
                 .overlay {
-                    HomeBodyFloatingView()
+                    ZStack {
+                        if viewModel.isShowingPopUpView {
+                            HomeBodyPopUpView()
+                        }
+                        
+                        HomeBodyFloatingView()
+
+                    }
                 }
+                
+                
             }
             
             Divider()
             Spacer()
         }
         .padding([.horizontal], 16)
+        .onSubmit {
+            print("Submit")
+        }
         .onAppear {
             viewModel.isShowingPopUpView.toggle()
+            
         }
+        
     }
 }
 

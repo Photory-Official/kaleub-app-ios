@@ -62,12 +62,14 @@ struct HomeBodyPopUpView: View {
             Button {
                 // TODO: cancel
                 viewModel.isShowingPopUpView.toggle()
+                print("didTapTouchButton")
             } label: {
                 Image("app.xmark")
                     .resizable()
                     .frame(width: 24, height: 24)
                     .padding(18)
             }
+            
         }
         
     }
@@ -76,5 +78,6 @@ struct HomeBodyPopUpView: View {
 struct HomeBodyPopUpView_Previews: PreviewProvider {
     static var previews: some View {
         HomeBodyPopUpView()
+            .environmentObject(HomeBodyViewModel())
     }
 }

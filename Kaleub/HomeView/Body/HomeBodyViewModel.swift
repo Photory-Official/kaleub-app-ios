@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import Combine
 
 // NOTE: 실제 데이터를 viewModel로 연결하여 사용합니다.
 class HomeBodyViewModel: ObservableObject {
@@ -15,6 +16,9 @@ class HomeBodyViewModel: ObservableObject {
     @Published var isShowingPopUpView: Bool = false
     /// HomeBodyPopUpView의 타입을 정하는 변수
     var popUpType: PopUpType = .create
+    
+    @Published var subject = CurrentValueSubject<Bool, Never>(false)
+    
     enum PopUpType {
         case create
         case join
