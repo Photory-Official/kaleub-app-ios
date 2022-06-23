@@ -11,17 +11,9 @@ import Combine
 // NOTE: 실제 데이터를 viewModel로 연결하여 사용합니다.
 class HomeBodyViewModel: ObservableObject {
     /// HomeBodyFloatingView를 띄우는 변수
-    @Published var isShowingFloatingView: Bool = false {
-        didSet {
-            print("\(self) | \(self.isShowingFloatingView)")
-        }
-    }
+    @Published var isShowingFloatingView: Bool = false
     /// HomeBodyPopUpView를 띄우는 변수
-    @Published var isShowingPopUpView: Bool = false {
-        didSet {
-            print("\(self) | \(self.isShowingPopUpView)")
-        }
-    }
+    @Published var isShowingPopUpView: Bool = false
     /// HomeBodyPopUpView의 타입을 정하는 변수
     var popUpType: PopUpType = .create
     
@@ -49,6 +41,7 @@ class HomeBodyViewModel: ObservableObject {
         }
     }
     
+    /// PopView가 나타나 있다면 FloatingView는 나타나지 않는 로직을 구현하는 함수
     func showingFloatingView() {
         isShowingFloatingView = isShowingPopUpView
         ? false

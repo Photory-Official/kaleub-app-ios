@@ -43,13 +43,11 @@ struct HomeBodyFloatingView: View {
             HStack {
                 Spacer()
                 
-                Button {
-                    viewModel.showingFloatingView()
-//                    viewModel.isShowingFloatingView = true
-                } label: {
+                Button(action: viewModel.showingFloatingView) {
                     Image("app.floating_button")
                         .resizable()
                         .frame(width: 62, height: 62)
+                    
                 }
             }
         }
