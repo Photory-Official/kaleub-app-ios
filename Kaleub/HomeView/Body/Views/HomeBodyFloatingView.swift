@@ -44,7 +44,7 @@ struct HomeBodyFloatingView: View {
                 Spacer()
                 
                 Button(action: viewModel.showingFloatingView) {
-                    Image("app.floating_button")
+                    Image("app.floating.button")
                         .resizable()
                         .frame(width: 62, height: 62)
                     
