@@ -32,7 +32,7 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "KaleubSDK::KaleubSDKTests"
+               BlueprintIdentifier = "A9F0AB5A285B22B0001171F1"
                BuildableName = "KaleubSDKTests.xctest"
                BlueprintName = "KaleubSDKTests"
                ReferencedContainer = "container:../kaleub-sdk-ios/KaleubSDK.xcodeproj">

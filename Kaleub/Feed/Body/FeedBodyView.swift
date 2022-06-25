@@ -20,9 +20,9 @@ struct FeedBodyView: View {
             switch self {
             case .standard:
                 return [
-                    GridItem(.flexible()),
-                    GridItem(.flexible()),
-                    GridItem(.flexible())
+                    GridItem(.flexible(), spacing: 0),
+                    GridItem(.flexible(), spacing: 0),
+                    GridItem(.flexible(), spacing: 0)
                 ]
             }
         }
@@ -35,14 +35,21 @@ struct FeedBodyView: View {
                 spacing: 0
             ) {
                 ForEach((1...10), id: \.self) { n in
-                    Image("app.feed" + "\(n)")
-                        .resizable()
-                        .aspectRatio(contentMode: .fit)
-                        .clipped()
+                    
+                    NavigationLink {
+                        // TODO: 다음 페이지로 이동
                         
-                        
+                    } label: {
+                        // TODO: 멀티포토 아이콘 배치
+                        Image("app.feed" + "\(n)")
+                            .resizable()
+                            .aspectRatio(contentMode: .fit)
+                            .clipped()
+                    }
+
                 }
             }
+            .padding(0)
         }
     }
 }
