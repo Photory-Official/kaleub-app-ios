@@ -24,8 +24,8 @@ struct FeedView: View {
                 Image("app.background")
             }
             
-            if viewModel.isShowingPopUpView {
-                FeedPopUpView()
+            if viewModel.isShowingRoomInfoEditPopUpView {
+                RoomInfoEditPopUpView()
             }
             
         }

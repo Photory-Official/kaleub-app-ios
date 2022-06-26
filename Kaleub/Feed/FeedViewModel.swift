@@ -9,8 +9,10 @@ import SwiftUI
 import Combine
 
 class FeedViewModel: ObservableObject {
-    @Published var isShowingPopUpView: Bool = false
+    @Published var isShowingRoomInfoEditPopUpView: Bool = false
     @Published var isShowingWriteView: Bool = false
+    @Published var isShowingCodeSharePopUpView: Bool = false
+    
     var popUpType: PopUpType = .editTitle
     
     enum PopUpType {

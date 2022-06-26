@@ -25,14 +25,14 @@ struct FeedHeaderView: View {
                 Menu {
                     Button {
                         viewModel.popUpType = .editTitle
-                        viewModel.isShowingPopUpView = true
+                        viewModel.isShowingRoomInfoEditPopUpView = true
                     } label: {
                         Text("방 이름 수정")
                     }
                     
                     Button {
                         viewModel.popUpType = .editPassword
-                        viewModel.isShowingPopUpView = true
+                        viewModel.isShowingRoomInfoEditPopUpView = true
                     } label: {
                         Text("비밀번호 수정")
                     }
@@ -66,8 +66,7 @@ struct FeedHeaderView: View {
                         // NOTE: 마지막에는 무조건 invite이미지
                         Button {
                             // TODO: 초대코드 복사
-                            
-                            
+                            viewModel.isShowingCodeSharePopUpView.toggle()
                         } label: {
                             Image("app.invite.button")
                                 .resizable()

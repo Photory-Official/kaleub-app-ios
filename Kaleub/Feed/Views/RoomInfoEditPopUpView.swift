@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct FeedPopUpView: View {
+struct RoomInfoEditPopUpView: View {
     @EnvironmentObject var viewModel: FeedViewModel
     
     @State var firstField: String = ""
@@ -17,13 +17,6 @@ struct FeedPopUpView: View {
             return 230
         } else {
             return 190
-        }
-    }
-    var opacity: Double {
-        if viewModel.popUpType == .editPassword {
-            return 1
-        } else {
-            return 0
         }
     }
     
@@ -81,7 +74,7 @@ struct FeedPopUpView: View {
                         
                         HStack {
                             Button {
-                                viewModel.isShowingPopUpView = false
+                                viewModel.isShowingRoomInfoEditPopUpView = false
                             } label: {
                                 Text("취소")
                                     .foregroundColor(.gray)
@@ -95,7 +88,7 @@ struct FeedPopUpView: View {
                             )
                             
                             Button {
-                                viewModel.isShowingPopUpView = false
+                                viewModel.isShowingRoomInfoEditPopUpView = false
                                 // TODO: Request Server
                                 
                             } label: {
@@ -118,7 +111,7 @@ struct FeedPopUpView: View {
 
 struct FeedPopUpView_Previews: PreviewProvider {
     static var previews: some View {
-        FeedPopUpView()
+        RoomInfoEditPopUpView()
             .environmentObject(FeedViewModel())
     }
 }

@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct FeedHeaderPopUpView: View {
+struct CodeSharePopUpView: View {
     // NOTE: - AAAAAHHH... 이거 rect가 배경으로 가야했네...
     var body: some View {
         RoundedRectangle(cornerRadius: 20)
@@ -73,6 +73,6 @@ struct FeedHeaderPopUpView: View {
 
 struct FeedHeaderPopUpView_Previews: PreviewProvider {
     static var previews: some View {
-        FeedHeaderPopUpView()
+        CodeSharePopUpView()
     }
 }
