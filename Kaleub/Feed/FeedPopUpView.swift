@@ -81,11 +81,10 @@ struct FeedPopUpView: View {
                         
                         HStack {
                             Button {
-                                // TODO: cancel
                                 viewModel.isShowingPopUpView = false
                             } label: {
                                 Text("취소")
-                                    .foregroundColor(.black)
+                                    .foregroundColor(.gray)
                             }
                             .frame(
                                 minWidth: 0,
