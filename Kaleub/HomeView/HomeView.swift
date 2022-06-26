@@ -15,6 +15,7 @@ struct HomeView: View {
                 // FIXME: dev용 임시버튼
                 NavigationLink {
                     FeedView()
+                        .environmentObject(FeedViewModel())
                 } label: {
                     Text("GOTO FeedView dev")
                 }

@@ -9,17 +9,27 @@ import SwiftUI
 import UIKit
 
 struct FeedView: View {
+    @EnvironmentObject var viewModel: FeedViewModel
+    
     var body: some View {
-        VStack(spacing: 0) {
-            FeedHeaderView(title: "그해 우리는", password: "123123")
-                .padding([.horizontal], 15)
-                .padding(.bottom, 28)
+        ZStack {
+            VStack(spacing: 0) {
+                FeedHeaderView(title: "그해 우리는", password: "123123")
+                    .padding([.horizontal], 15)
+                    .padding(.bottom, 28)
+                
+                FeedBodyView()
+            }
+            .background {
+                Image("app.background")
+            }
             
-            FeedBodyView()
+            if viewModel.isShowingPopUpView {
+                FeedPopUpView()
+            }
+            
         }
-        .background {
-            Image("app.background")
-        }
+        
         .toolbar {
             // TODO: Custom BackButton
             
@@ -52,5 +62,6 @@ struct FeedView: View {
 struct FeedView_Previews: PreviewProvider {
     static var previews: some View {
         FeedView()
+            .environmentObject(FeedViewModel())
     }
 }

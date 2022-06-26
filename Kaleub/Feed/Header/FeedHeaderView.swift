@@ -8,13 +8,12 @@
 import SwiftUI
 
 struct FeedHeaderView: View {
+    @EnvironmentObject var viewModel: FeedViewModel
+    
     let title: String
     let password: String
     
-    @State var isShowingPopUpView: Bool = false
-    
     var body: some View {
-        
         
         VStack(alignment: .leading) {
             HStack {
@@ -25,13 +24,13 @@ struct FeedHeaderView: View {
                 // NOTE: 앱적허용,, UI구성 저렇게 하는 방법을 더 고민해 봐야겠습니다.
                 Menu {
                     Button {
-                        isShowingPopUpView = true
+                        viewModel.isShowingPopUpView = true
                     } label: {
                         Text("방 이름 수정")
                     }
                     
                     Button {
-                        isShowingPopUpView = true
+                        viewModel.isShowingPopUpView = true
                     } label: {
                         Text("비밀번호 수정")
                     }

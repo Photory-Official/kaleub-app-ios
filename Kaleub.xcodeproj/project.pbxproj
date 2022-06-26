@@ -15,6 +15,8 @@
 		B16E630028637354005E0984 /* HomeBodyPopUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B16E62FF28637354005E0984 /* HomeBodyPopUpView.swift */; };
 		B18F39F52864D2D20016531D /* FeedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B18F39F42864D2D20016531D /* FeedView.swift */; };
 		B18F39F82864D3790016531D /* FeedHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B18F39F72864D3790016531D /* FeedHeaderView.swift */; };
+		B1AEE5E92868177700BFC0E4 /* FeedPopUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1AEE5E82868177700BFC0E4 /* FeedPopUpView.swift */; };
+		B1AEE5EB286817A000BFC0E4 /* FeedViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1AEE5EA286817A000BFC0E4 /* FeedViewModel.swift */; };
 		B1D799F528617A740035661C /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1D799F428617A740035661C /* SignUpView.swift */; };
 		B1D799F8286189600035661C /* TextFieldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1D799F7286189600035661C /* TextFieldView.swift */; };
 		B1D799FA28618A620035661C /* SignUpFieldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1D799F928618A620035661C /* SignUpFieldView.swift */; };
@@ -57,6 +59,8 @@
 		B16E62FF28637354005E0984 /* HomeBodyPopUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeBodyPopUpView.swift; sourceTree = "<group>"; };
 		B18F39F42864D2D20016531D /* FeedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedView.swift; sourceTree = "<group>"; };
 		B18F39F72864D3790016531D /* FeedHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedHeaderView.swift; sourceTree = "<group>"; };
+		B1AEE5E82868177700BFC0E4 /* FeedPopUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedPopUpView.swift; sourceTree = "<group>"; };
+		B1AEE5EA286817A000BFC0E4 /* FeedViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewModel.swift; sourceTree = "<group>"; };
 		B1D799F428617A740035661C /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
 		B1D799F7286189600035661C /* TextFieldView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldView.swift; sourceTree = "<group>"; };
 		B1D799F928618A620035661C /* SignUpFieldView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpFieldView.swift; sourceTree = "<group>"; };
@@ -122,7 +126,9 @@
 		B18F39F32864D2BB0016531D /* Feed */ = {
 			isa = PBXGroup;
 			children = (
+				B1AEE5EA286817A000BFC0E4 /* FeedViewModel.swift */,
 				B18F39F42864D2D20016531D /* FeedView.swift */,
+				B1AEE5E82868177700BFC0E4 /* FeedPopUpView.swift */,
 				B18F39F62864D36D0016531D /* Header */,
 				B163146F2866C4C7009C7595 /* Body */,
 				B16314722866E86F009C7595 /* DetailView */,
@@ -324,7 +330,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B1AEE5EB286817A000BFC0E4 /* FeedViewModel.swift in Sources */,
 				B18F39F52864D2D20016531D /* FeedView.swift in Sources */,
+				B1AEE5E92868177700BFC0E4 /* FeedPopUpView.swift in Sources */,
 				B1D79A142861AC590035661C /* HomeBodyView.swift in Sources */,
 				B1D799FA28618A620035661C /* SignUpFieldView.swift in Sources */,
 				B1D79A102861A11B0035661C /* HomeHeaderView.swift in Sources */,
