@@ -49,6 +49,7 @@ struct HomeBodyView: View {
                 .overlay {
                     ZStack {
                         if viewModel.isShowingPopUpView {
+                            
                             HomeBodyPopUpView()
                         }
                         
