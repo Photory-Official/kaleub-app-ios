@@ -11,27 +11,27 @@ import Combine
 class FeedViewModel: ObservableObject {
     @Published var isShowingPopUpView: Bool = false
     
-    var popUpType: PopUpType = .create
+    var popUpType: PopUpType = .editTitle
     
     enum PopUpType {
-        case create
-        case join
+        case editPassword
+        case editTitle
         
         var item: [String] {
             switch self {
-            case .create:
+            case .editPassword:
                 return [
-                    "CREATE THE ROOM",
-                    "새로운 방을 만들어\n친구를 초대하자!",
-                    "방 제목을 입력해 주세요. (4~6)",
-                    "비밀번호를 설정해주세요. (4~12)"
+                    "Edit password",
+                    "수정할 비밀번호를 입력해줘",
+                    "수정할 비밀번호를 입력해주세요",
+                    "수정할 비밀번호를 한번 더 입력해주세요"
                 ]
-            case .join:
+            case .editTitle:
                 return [
-                    "JOIN THE ROOM",
-                    "친구들과 추억이 담긴 방\n참여해 볼 수 있어!",
-                    "초대코드를 입력해 주세요.",
-                    "비밀번호를 입력해 주세요.(4~12)"
+                    "Edit roomname",
+                    "수정할 방 이름을 입력해줘!",
+                    "몇 글자 이하로 입력해주세요.",
+                    ""
                 ]
             }
         }

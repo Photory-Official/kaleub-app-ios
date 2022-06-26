@@ -12,11 +12,25 @@ struct FeedPopUpView: View {
     
     @State var firstField: String = ""
     @State var secondField: String = ""
+    var rectangleHeight: Double {
+        if viewModel.popUpType == .editPassword {
+            return 230
+        } else {
+            return 190
+        }
+    }
+    var opacity: Double {
+        if viewModel.popUpType == .editPassword {
+            return 1
+        } else {
+            return 0
+        }
+    }
     
     var body: some View {
         ZStack(alignment: .topLeading) {
             RoundedRectangle(cornerRadius: 20)
-                .frame(width: 320, height: 237)
+                .frame(width: 320, height: rectangleHeight)
                 .foregroundColor(.white)
                 .overlay {
                     VStack(alignment: .center) {
@@ -32,47 +46,73 @@ struct FeedPopUpView: View {
                         
                         // NOTE: TextField 자체에 placeholder 넣어도 되나, font 변경이 가능한 지에 대한 의문.
                         TextField("", text: $firstField)
+                            .frame(height: 34)
                             .multilineTextAlignment(.center)
                             .background {
                                 RoundedRectangle(cornerRadius: 10)
                                     .foregroundColor(ColorSet.primary)
                                     .background {
                                         if firstField.isEmpty {
-                                            Text(viewModel.popUpType.item[2])
+                                            Text(viewModel.popUpType.item[1])
                                                 .font(.system(size: 12))
                                         }
                                     }
                             }
                             .padding([.horizontal], 27)
-                        
-                        TextField("", text: $secondField)
-                            .multilineTextAlignment(.center)
-                            .background {
-                                RoundedRectangle(cornerRadius: 10)
-                                    .foregroundColor(ColorSet.primary)
-                                    .background {
-                                        if secondField.isEmpty {
-                                            Text(viewModel.popUpType.item[2])
-                                                .font(.system(size: 12))
+                            
+                        if viewModel.popUpType == .editPassword {
+                            TextField("", text: $secondField)
+                                .frame(height: 34)
+                                .multilineTextAlignment(.center)
+                                .background {
+                                    RoundedRectangle(cornerRadius: 10)
+                                        .foregroundColor(ColorSet.primary)
+                                        .background {
+                                            if secondField.isEmpty {
+                                                Text(viewModel.popUpType.item[2])
+                                                    .font(.system(size: 12))
+                                            }
                                         }
-                                    }
-                            }
-                            .padding([.horizontal], 27)
+                                }
+                                .padding([.horizontal], 27)
+                        }
                         
                         Spacer()
+                        
+                        HStack {
+                            Button {
+                                // TODO: cancel
+                                viewModel.isShowingPopUpView = false
+                            } label: {
+                                Text("취소")
+                                    .foregroundColor(.black)
+                            }
+                            .frame(
+                                minWidth: 0,
+                                maxWidth: .infinity,
+                                minHeight: 0,
+                                maxHeight: 52,
+                                alignment: .center
+                            )
+                            
+                            Button {
+                                viewModel.isShowingPopUpView = false
+                                // TODO: Request Server
+                                
+                            } label: {
+                                Text("확인")
+                                    .foregroundColor(.black)
+                            }
+                            .frame(
+                                minWidth: 0,
+                                maxWidth: .infinity,
+                                minHeight: 0,
+                                maxHeight: 52,
+                                alignment: .center
+                            )
+                        }
                     }
                 }
-            
-            Button {
-                viewModel.isShowingPopUpView = false
-                print("didTapTouchButton")
-            } label: {
-                Image("app.xmark")
-                    .resizable()
-                    .frame(width: 24, height: 24)
-                    .padding(18)
-            }
-            
         }
     }
 }
@@ -80,5 +120,19 @@ struct FeedPopUpView: View {
 struct FeedPopUpView_Previews: PreviewProvider {
     static var previews: some View {
         FeedPopUpView()
+            .environmentObject(FeedViewModel())
     }
 }
+
+// NOTE: - Legacy
+
+//Button {
+//    viewModel.isShowingPopUpView = false
+//    print("didTapTouchButton")
+//} label: {
+//    Image("app.xmark")
+//        .resizable()
+//        .frame(width: 24, height: 24)
+//        .padding(18)
+//}
+

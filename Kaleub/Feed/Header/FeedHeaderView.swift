@@ -24,12 +24,14 @@ struct FeedHeaderView: View {
                 // NOTE: 앱적허용,, UI구성 저렇게 하는 방법을 더 고민해 봐야겠습니다.
                 Menu {
                     Button {
+                        viewModel.popUpType = .editTitle
                         viewModel.isShowingPopUpView = true
                     } label: {
                         Text("방 이름 수정")
                     }
                     
                     Button {
+                        viewModel.popUpType = .editPassword
                         viewModel.isShowingPopUpView = true
                     } label: {
                         Text("비밀번호 수정")

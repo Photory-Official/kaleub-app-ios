@@ -16,7 +16,7 @@ struct HomeBodyPopUpView: View {
     var body: some View {
         ZStack(alignment: .topLeading) {
             RoundedRectangle(cornerRadius: 20)
-                .frame(width: 320, height: 237)
+                .frame(width: 320, height: 205)
                 .foregroundColor(.white)
                 .overlay {
                     VStack(alignment: .center) {
