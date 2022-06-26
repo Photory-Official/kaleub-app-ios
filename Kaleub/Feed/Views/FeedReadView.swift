@@ -8,7 +8,8 @@
 import SwiftUI
 
 struct FeedReadView: View {
-    
+    @EnvironmentObject var viewModel: FeedViewModel
+      
     let date: String = "2022년 06월 30일"
     let title: String = "그 해 우리는 짱"
     let description: String = "나는 지금 그해우리는 프로젝트에 참여하고 있음 움하하"
@@ -48,6 +49,9 @@ struct FeedReadView: View {
             
             Spacer()
         }
+        .fullScreenCover(isPresented: $viewModel.isShowingWriteView) {
+            FeedWriteView(.update, title: title, description: description)
+        }
         .toolbar {
             ToolbarItem(placement: .principal) {
                 Text(date)
@@ -57,7 +61,8 @@ struct FeedReadView: View {
                 // TODO: 텍스트 컬러 색 변경하기
                 Menu {
                     Button {
-                        
+                        // TODO: 이거 띄우기
+                        viewModel.isShowingWriteView.toggle()
                     } label: {
                         Text("수정하기")
                     }

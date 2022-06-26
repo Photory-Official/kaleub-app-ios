@@ -29,7 +29,6 @@ struct FeedView: View {
             }
             
         }
-        
         .toolbar {
             // TODO: Custom BackButton
             
@@ -45,7 +44,8 @@ struct FeedView: View {
                     }
                     
                     NavigationLink {
-                        FeedCreateView()
+                        FeedWriteView(.create, title: "", description: "")
+                            .environmentObject(FeedViewModel())
                     } label: {
                         Image("app.plus")
                             .resizable()
