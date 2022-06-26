@@ -52,12 +52,39 @@ struct FeedReadView: View {
             ToolbarItem(placement: .principal) {
                 Text(date)
             }
+            
+            ToolbarItem(placement: .navigationBarTrailing) {
+                // TODO: 텍스트 컬러 색 변경하기
+                Menu {
+                    Button {
+                        
+                    } label: {
+                        Text("수정하기")
+                    }
+                    
+                    Button {
+                        
+                    } label: {
+                        Text("삭제하기")
+                    }
+        
+                } label: {
+                    Image("app.union")
+                        .resizable()
+                        .frame(width: 20, height: 4)
+                        .aspectRatio(contentMode: .fit)
+                        .clipped()
+                }
+            }
         }
     }
 }
 
 struct FeedDetailView_Previews: PreviewProvider {
     static var previews: some View {
-        FeedReadView()
+        NavigationView {
+            
+            FeedReadView()
+        }
     }
 }
