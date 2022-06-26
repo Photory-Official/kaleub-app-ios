@@ -45,7 +45,7 @@ struct FeedView: View {
                     }
                     
                     NavigationLink {
-                        
+                        FeedCreateView()
                     } label: {
                         Image("app.plus")
                             .resizable()

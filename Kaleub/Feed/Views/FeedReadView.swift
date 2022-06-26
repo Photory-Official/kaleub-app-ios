@@ -7,11 +7,11 @@
 
 import SwiftUI
 
-struct FeedDetailView: View {
+struct FeedReadView: View {
+    
     let date: String = "2022년 06월 30일"
     let title: String = "그 해 우리는 짱"
     let description: String = "나는 지금 그해우리는 프로젝트에 참여하고 있음 움하하"
-    
     
     var body: some View {
         VStack {
@@ -58,6 +58,6 @@ struct FeedDetailView: View {
 
 struct FeedDetailView_Previews: PreviewProvider {
     static var previews: some View {
-        FeedDetailView()
+        FeedReadView()
     }
 }

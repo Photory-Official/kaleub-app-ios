@@ -38,7 +38,7 @@ struct FeedBodyView: View {
                     
                     NavigationLink {
                         // TODO: 다음 페이지로 이동
-                        FeedDetailView()
+                        FeedReadView()
                     } label: {
                         // TODO: 멀티포토 아이콘 배치
                         Image("app.feed" + "\(n)")
