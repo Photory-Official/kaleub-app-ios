@@ -10,6 +10,7 @@ import SwiftUI
 struct FeedReadView: View {
     @EnvironmentObject var viewModel: FeedViewModel
       
+    // TODO: 나중에 ViewModel로 이동할 예정
     let date: String = "2022년 06월 30일"
     let title: String = "그 해 우리는 짱"
     let description: String = "나는 지금 그해우리는 프로젝트에 참여하고 있음 움하하"

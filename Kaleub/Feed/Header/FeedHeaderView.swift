@@ -64,9 +64,15 @@ struct FeedHeaderView: View {
                             .frame(width: 48, height: 48, alignment: .center)
                         
                         // NOTE: 마지막에는 무조건 invite이미지
-                        Image("app.invite.button")
-                            .resizable()
-                            .frame(width: 48, height: 48, alignment: .center)
+                        Button {
+                            // TODO: 초대코드 복사
+                            
+                            
+                        } label: {
+                            Image("app.invite.button")
+                                .resizable()
+                                .frame(width: 48, height: 48, alignment: .center)
+                        }
                     }
                 }
             }

@@ -18,6 +18,7 @@
 		B1AEE5E92868177700BFC0E4 /* FeedPopUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1AEE5E82868177700BFC0E4 /* FeedPopUpView.swift */; };
 		B1AEE5EB286817A000BFC0E4 /* FeedViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1AEE5EA286817A000BFC0E4 /* FeedViewModel.swift */; };
 		B1AEE5ED28682F4400BFC0E4 /* FeedWriteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1AEE5EC28682F4400BFC0E4 /* FeedWriteView.swift */; };
+		B1AEE5EF28684D0700BFC0E4 /* FeedHeaderPopUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1AEE5EE28684D0700BFC0E4 /* FeedHeaderPopUpView.swift */; };
 		B1D799F528617A740035661C /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1D799F428617A740035661C /* SignUpView.swift */; };
 		B1D799F8286189600035661C /* TextFieldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1D799F7286189600035661C /* TextFieldView.swift */; };
 		B1D799FA28618A620035661C /* SignUpFieldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1D799F928618A620035661C /* SignUpFieldView.swift */; };
@@ -63,6 +64,7 @@
 		B1AEE5E82868177700BFC0E4 /* FeedPopUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedPopUpView.swift; sourceTree = "<group>"; };
 		B1AEE5EA286817A000BFC0E4 /* FeedViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewModel.swift; sourceTree = "<group>"; };
 		B1AEE5EC28682F4400BFC0E4 /* FeedWriteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedWriteView.swift; sourceTree = "<group>"; };
+		B1AEE5EE28684D0700BFC0E4 /* FeedHeaderPopUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedHeaderPopUpView.swift; sourceTree = "<group>"; };
 		B1D799F428617A740035661C /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
 		B1D799F7286189600035661C /* TextFieldView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldView.swift; sourceTree = "<group>"; };
 		B1D799F928618A620035661C /* SignUpFieldView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpFieldView.swift; sourceTree = "<group>"; };
@@ -143,6 +145,7 @@
 			isa = PBXGroup;
 			children = (
 				B18F39F72864D3790016531D /* FeedHeaderView.swift */,
+				B1AEE5EE28684D0700BFC0E4 /* FeedHeaderPopUpView.swift */,
 			);
 			path = Header;
 			sourceTree = "<group>";
@@ -351,6 +354,7 @@
 				B1D799F528617A740035661C /* SignUpView.swift in Sources */,
 				B1D79A1A2861BAA90035661C /* HomeBodyGridView.swift in Sources */,
 				B1D799F8286189600035661C /* TextFieldView.swift in Sources */,
+				B1AEE5EF28684D0700BFC0E4 /* FeedHeaderPopUpView.swift in Sources */,
 				B1D79A092861902C0035661C /* SignHeaderView.swift in Sources */,
 				B1D799FC28618A8F0035661C /* SignUpViewModel.swift in Sources */,
 				B1D79A0E2861A0AC0035661C /* HomeView.swift in Sources */,

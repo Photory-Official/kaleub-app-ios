@@ -38,6 +38,7 @@ struct FeedWriteView: View {
                         presentationMode.wrappedValue.dismiss()
                     } label: {
                         Text("취소")
+                            .foregroundColor(.black)
                     }
                     
                     Spacer()
@@ -49,6 +50,7 @@ struct FeedWriteView: View {
                         presentationMode.wrappedValue.dismiss()
                     } label: {
                         Text("완료")
+                            .foregroundColor(.black)
                     }
                 }
                 .frame(height: 50)
