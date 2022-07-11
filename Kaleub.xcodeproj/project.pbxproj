@@ -9,8 +9,33 @@
 /* Begin PBXBuildFile section */
 		A9F0AB6B285B2732001171F1 /* KaleubSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B1FDB066285A284F00B72846 /* KaleubSDK.framework */; };
 		A9F0AB6C285B2732001171F1 /* KaleubSDK.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B1FDB066285A284F00B72846 /* KaleubSDK.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		B16314712866C4D6009C7595 /* FeedBodyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B16314702866C4D6009C7595 /* FeedBodyView.swift */; };
+		B16314742866E898009C7595 /* FeedReadView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B16314732866E898009C7595 /* FeedReadView.swift */; };
+		B16E62FD286371AC005E0984 /* HomeBodyFloatingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B16E62FC286371AC005E0984 /* HomeBodyFloatingView.swift */; };
+		B16E630028637354005E0984 /* HomeBodyPopUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B16E62FF28637354005E0984 /* HomeBodyPopUpView.swift */; };
+		B18F39F52864D2D20016531D /* FeedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B18F39F42864D2D20016531D /* FeedView.swift */; };
+		B18F39F82864D3790016531D /* FeedHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B18F39F72864D3790016531D /* FeedHeaderView.swift */; };
+		B1AEE5E92868177700BFC0E4 /* RoomInfoEditPopUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1AEE5E82868177700BFC0E4 /* RoomInfoEditPopUpView.swift */; };
+		B1AEE5EB286817A000BFC0E4 /* FeedViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1AEE5EA286817A000BFC0E4 /* FeedViewModel.swift */; };
+		B1AEE5ED28682F4400BFC0E4 /* FeedWriteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1AEE5EC28682F4400BFC0E4 /* FeedWriteView.swift */; };
+		B1AEE5EF28684D0700BFC0E4 /* CodeSharePopUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1AEE5EE28684D0700BFC0E4 /* CodeSharePopUpView.swift */; };
+		B1D799F528617A740035661C /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1D799F428617A740035661C /* SignUpView.swift */; };
+		B1D799F8286189600035661C /* TextFieldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1D799F7286189600035661C /* TextFieldView.swift */; };
+		B1D799FA28618A620035661C /* SignUpFieldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1D799F928618A620035661C /* SignUpFieldView.swift */; };
+		B1D799FC28618A8F0035661C /* SignUpViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1D799FB28618A8F0035661C /* SignUpViewModel.swift */; };
+		B1D79A0128618C0C0035661C /* BackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1D79A0028618C0C0035661C /* BackgroundView.swift */; };
+		B1D79A0528618DC80035661C /* SignInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1D79A0428618DC80035661C /* SignInView.swift */; };
+		B1D79A0728618E810035661C /* SignInFieldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1D79A0628618E810035661C /* SignInFieldView.swift */; };
+		B1D79A092861902C0035661C /* SignHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1D79A082861902C0035661C /* SignHeaderView.swift */; };
+		B1D79A0B286193810035661C /* AuthenticationButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1D79A0A286193810035661C /* AuthenticationButton.swift */; };
+		B1D79A0E2861A0AC0035661C /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1D79A0D2861A0AC0035661C /* HomeView.swift */; };
+		B1D79A102861A11B0035661C /* HomeHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1D79A0F2861A11B0035661C /* HomeHeaderView.swift */; };
+		B1D79A142861AC590035661C /* HomeBodyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1D79A132861AC590035661C /* HomeBodyView.swift */; };
+		B1D79A182861B32B0035661C /* HomeBodyHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1D79A172861B32B0035661C /* HomeBodyHeaderView.swift */; };
+		B1D79A1A2861BAA90035661C /* HomeBodyGridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1D79A192861BAA90035661C /* HomeBodyGridView.swift */; };
+		B1D79A1C2861BACA0035661C /* HomeBodyViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1D79A1B2861BACA0035661C /* HomeBodyViewModel.swift */; };
+		B1D79A1E2861EE5A0035661C /* ColorSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1D79A1D2861EE5A0035661C /* ColorSet.swift */; };
 		B1FDB04A285A063300B72846 /* KaleubApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1FDB049285A063300B72846 /* KaleubApp.swift */; };
-		B1FDB04C285A063300B72846 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1FDB04B285A063300B72846 /* ContentView.swift */; };
 		B1FDB04E285A063400B72846 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B1FDB04D285A063400B72846 /* Assets.xcassets */; };
 		B1FDB051285A063400B72846 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B1FDB050285A063400B72846 /* Preview Assets.xcassets */; };
 /* End PBXBuildFile section */
@@ -30,9 +55,34 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		B16314702866C4D6009C7595 /* FeedBodyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedBodyView.swift; sourceTree = "<group>"; };
+		B16314732866E898009C7595 /* FeedReadView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedReadView.swift; sourceTree = "<group>"; };
+		B16E62FC286371AC005E0984 /* HomeBodyFloatingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeBodyFloatingView.swift; sourceTree = "<group>"; };
+		B16E62FF28637354005E0984 /* HomeBodyPopUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeBodyPopUpView.swift; sourceTree = "<group>"; };
+		B18F39F42864D2D20016531D /* FeedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedView.swift; sourceTree = "<group>"; };
+		B18F39F72864D3790016531D /* FeedHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedHeaderView.swift; sourceTree = "<group>"; };
+		B1AEE5E82868177700BFC0E4 /* RoomInfoEditPopUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomInfoEditPopUpView.swift; sourceTree = "<group>"; };
+		B1AEE5EA286817A000BFC0E4 /* FeedViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewModel.swift; sourceTree = "<group>"; };
+		B1AEE5EC28682F4400BFC0E4 /* FeedWriteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedWriteView.swift; sourceTree = "<group>"; };
+		B1AEE5EE28684D0700BFC0E4 /* CodeSharePopUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeSharePopUpView.swift; sourceTree = "<group>"; };
+		B1D799F428617A740035661C /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
+		B1D799F7286189600035661C /* TextFieldView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldView.swift; sourceTree = "<group>"; };
+		B1D799F928618A620035661C /* SignUpFieldView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpFieldView.swift; sourceTree = "<group>"; };
+		B1D799FB28618A8F0035661C /* SignUpViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewModel.swift; sourceTree = "<group>"; };
+		B1D79A0028618C0C0035661C /* BackgroundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundView.swift; sourceTree = "<group>"; };
+		B1D79A0428618DC80035661C /* SignInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInView.swift; sourceTree = "<group>"; };
+		B1D79A0628618E810035661C /* SignInFieldView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInFieldView.swift; sourceTree = "<group>"; };
+		B1D79A082861902C0035661C /* SignHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignHeaderView.swift; sourceTree = "<group>"; };
+		B1D79A0A286193810035661C /* AuthenticationButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationButton.swift; sourceTree = "<group>"; };
+		B1D79A0D2861A0AC0035661C /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		B1D79A0F2861A11B0035661C /* HomeHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeHeaderView.swift; sourceTree = "<group>"; };
+		B1D79A132861AC590035661C /* HomeBodyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeBodyView.swift; sourceTree = "<group>"; };
+		B1D79A172861B32B0035661C /* HomeBodyHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeBodyHeaderView.swift; sourceTree = "<group>"; };
+		B1D79A192861BAA90035661C /* HomeBodyGridView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeBodyGridView.swift; sourceTree = "<group>"; };
+		B1D79A1B2861BACA0035661C /* HomeBodyViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeBodyViewModel.swift; sourceTree = "<group>"; };
+		B1D79A1D2861EE5A0035661C /* ColorSet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ColorSet.swift; path = ../../../../ColorSet.swift; sourceTree = "<group>"; };
 		B1FDB046285A063300B72846 /* Kaleub.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Kaleub.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B1FDB049285A063300B72846 /* KaleubApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KaleubApp.swift; sourceTree = "<group>"; };
-		B1FDB04B285A063300B72846 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		B1FDB04D285A063400B72846 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B1FDB050285A063400B72846 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		B1FDB066285A284F00B72846 /* KaleubSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = KaleubSDK.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -50,6 +100,124 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B163146F2866C4C7009C7595 /* Body */ = {
+			isa = PBXGroup;
+			children = (
+				B16314702866C4D6009C7595 /* FeedBodyView.swift */,
+			);
+			path = Body;
+			sourceTree = "<group>";
+		};
+		B16314722866E86F009C7595 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				B16314732866E898009C7595 /* FeedReadView.swift */,
+				B1AEE5EC28682F4400BFC0E4 /* FeedWriteView.swift */,
+				B1AEE5E82868177700BFC0E4 /* RoomInfoEditPopUpView.swift */,
+				B1AEE5EE28684D0700BFC0E4 /* CodeSharePopUpView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		B16E62FE28637267005E0984 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				B1D79A172861B32B0035661C /* HomeBodyHeaderView.swift */,
+				B1D79A192861BAA90035661C /* HomeBodyGridView.swift */,
+				B16E62FC286371AC005E0984 /* HomeBodyFloatingView.swift */,
+				B16E62FF28637354005E0984 /* HomeBodyPopUpView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		B18F39F32864D2BB0016531D /* Feed */ = {
+			isa = PBXGroup;
+			children = (
+				B1AEE5EA286817A000BFC0E4 /* FeedViewModel.swift */,
+				B18F39F42864D2D20016531D /* FeedView.swift */,
+				B18F39F62864D36D0016531D /* Header */,
+				B163146F2866C4C7009C7595 /* Body */,
+				B16314722866E86F009C7595 /* Views */,
+			);
+			path = Feed;
+			sourceTree = "<group>";
+		};
+		B18F39F62864D36D0016531D /* Header */ = {
+			isa = PBXGroup;
+			children = (
+				B18F39F72864D3790016531D /* FeedHeaderView.swift */,
+			);
+			path = Header;
+			sourceTree = "<group>";
+		};
+		B1D799F328617A1C0035661C /* Auth */ = {
+			isa = PBXGroup;
+			children = (
+				B1D79A082861902C0035661C /* SignHeaderView.swift */,
+				B1D79A0A286193810035661C /* AuthenticationButton.swift */,
+				B1D79A0328618DBB0035661C /* SingIn */,
+				B1D79A0228618D710035661C /* SignUp */,
+			);
+			name = Auth;
+			sourceTree = "<group>";
+		};
+		B1D799F6286189500035661C /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				B1D799F7286189600035661C /* TextFieldView.swift */,
+				B1D79A0028618C0C0035661C /* BackgroundView.swift */,
+				B1D79A1D2861EE5A0035661C /* ColorSet.swift */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		B1D79A0228618D710035661C /* SignUp */ = {
+			isa = PBXGroup;
+			children = (
+				B1D799FB28618A8F0035661C /* SignUpViewModel.swift */,
+				B1D799F428617A740035661C /* SignUpView.swift */,
+				B1D799F928618A620035661C /* SignUpFieldView.swift */,
+			);
+			name = SignUp;
+			sourceTree = "<group>";
+		};
+		B1D79A0328618DBB0035661C /* SingIn */ = {
+			isa = PBXGroup;
+			children = (
+				B1D79A0428618DC80035661C /* SignInView.swift */,
+				B1D79A0628618E810035661C /* SignInFieldView.swift */,
+			);
+			path = SingIn;
+			sourceTree = "<group>";
+		};
+		B1D79A0C2861A0A00035661C /* HomeView */ = {
+			isa = PBXGroup;
+			children = (
+				B1D79A0D2861A0AC0035661C /* HomeView.swift */,
+				B1D79A112861A1BC0035661C /* Header */,
+				B1D79A122861AC080035661C /* Body */,
+			);
+			path = HomeView;
+			sourceTree = "<group>";
+		};
+		B1D79A112861A1BC0035661C /* Header */ = {
+			isa = PBXGroup;
+			children = (
+				B1D79A0F2861A11B0035661C /* HomeHeaderView.swift */,
+			);
+			path = Header;
+			sourceTree = "<group>";
+		};
+		B1D79A122861AC080035661C /* Body */ = {
+			isa = PBXGroup;
+			children = (
+				B1D79A1B2861BACA0035661C /* HomeBodyViewModel.swift */,
+				B1D79A132861AC590035661C /* HomeBodyView.swift */,
+				B16E62FE28637267005E0984 /* Views */,
+			);
+			path = Body;
+			sourceTree = "<group>";
+		};
 		B1FDB03D285A063300B72846 = {
 			isa = PBXGroup;
 			children = (
@@ -71,7 +239,10 @@
 			isa = PBXGroup;
 			children = (
 				B1FDB049285A063300B72846 /* KaleubApp.swift */,
-				B1FDB04B285A063300B72846 /* ContentView.swift */,
+				B1D799F328617A1C0035661C /* Auth */,
+				B1D79A0C2861A0A00035661C /* HomeView */,
+				B18F39F32864D2BB0016531D /* Feed */,
+				B1D799F6286189500035661C /* Common */,
 				B1FDB04D285A063400B72846 /* Assets.xcassets */,
 				B1FDB04F285A063400B72846 /* Preview Content */,
 			);
@@ -165,7 +336,32 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B1FDB04C285A063300B72846 /* ContentView.swift in Sources */,
+				B1AEE5EB286817A000BFC0E4 /* FeedViewModel.swift in Sources */,
+				B18F39F52864D2D20016531D /* FeedView.swift in Sources */,
+				B1AEE5E92868177700BFC0E4 /* RoomInfoEditPopUpView.swift in Sources */,
+				B1D79A142861AC590035661C /* HomeBodyView.swift in Sources */,
+				B1D799FA28618A620035661C /* SignUpFieldView.swift in Sources */,
+				B1D79A102861A11B0035661C /* HomeHeaderView.swift in Sources */,
+				B1D79A1E2861EE5A0035661C /* ColorSet.swift in Sources */,
+				B16E630028637354005E0984 /* HomeBodyPopUpView.swift in Sources */,
+				B1D79A0728618E810035661C /* SignInFieldView.swift in Sources */,
+				B18F39F82864D3790016531D /* FeedHeaderView.swift in Sources */,
+				B1D79A0B286193810035661C /* AuthenticationButton.swift in Sources */,
+				B1D79A182861B32B0035661C /* HomeBodyHeaderView.swift in Sources */,
+				B1AEE5ED28682F4400BFC0E4 /* FeedWriteView.swift in Sources */,
+				B16E62FD286371AC005E0984 /* HomeBodyFloatingView.swift in Sources */,
+				B1D79A0128618C0C0035661C /* BackgroundView.swift in Sources */,
+				B1D799F528617A740035661C /* SignUpView.swift in Sources */,
+				B1D79A1A2861BAA90035661C /* HomeBodyGridView.swift in Sources */,
+				B1D799F8286189600035661C /* TextFieldView.swift in Sources */,
+				B1AEE5EF28684D0700BFC0E4 /* CodeSharePopUpView.swift in Sources */,
+				B1D79A092861902C0035661C /* SignHeaderView.swift in Sources */,
+				B1D799FC28618A8F0035661C /* SignUpViewModel.swift in Sources */,
+				B1D79A0E2861A0AC0035661C /* HomeView.swift in Sources */,
+				B16314742866E898009C7595 /* FeedReadView.swift in Sources */,
+				B16314712866C4D6009C7595 /* FeedBodyView.swift in Sources */,
+				B1D79A1C2861BACA0035661C /* HomeBodyViewModel.swift in Sources */,
+				B1D79A0528618DC80035661C /* SignInView.swift in Sources */,
 				B1FDB04A285A063300B72846 /* KaleubApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -12,7 +12,8 @@ import KaleubSDK
 struct KaleubApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            
+            HomeView()
         }
     }
     
