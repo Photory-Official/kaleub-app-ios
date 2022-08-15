@@ -8,12 +8,11 @@
 import SwiftUI
 
 struct SignInView: View {
+    @StateObject var viewModel = SignInViewModel()
+    
     var body: some View {
         NavigationView {
             ZStack {
-                // NOTE: background의 경우에는 나중에 테마를 추가하면서 viewModel을 따로 만들 예정
-                BackgroundView("background")
-                
                 VStack {
                     SignHeaderView("어서와!")
                     
@@ -21,21 +20,31 @@ struct SignInView: View {
                     
                     Spacer()
                     
-                    AuthConfirmButton(.signIn)
+                    Button {
+                        // NOTE: - 로그인 액션
+                    } label: {
+                        Text("로그인")
+                            .modifier(AuthView.AuthButtonModifier())
+                    }
+
                     
                     NavigationLink {
                         SignUpView()
                             .environmentObject(SignUpViewModel())
                     } label: {
-                        AuthConfirmButton(.signUp)
+                        Text("회원가입")
+                            .modifier(AuthView.AuthButtonModifier())
                     }
-                    
-//                    Spacer()
+ 
                 }
+            }
+            .background {
+                Image("app.background")
             }
             .navigationBarHidden(true)
         }
     }
+    
 }
 
 struct SignInView_Previews: PreviewProvider {

@@ -20,7 +20,7 @@ struct SignUpFieldView: View {
                     HStack(alignment: .bottom) {
                         TextFieldView("이름 (닉네임)", $viewModel.email)
                         
-                        Image("button")
+                        Image("app.button")
                             .overlay {
                                 Text("중복 확인")
                             }
@@ -51,11 +51,10 @@ struct SignUpFieldView: View {
             
             // TODO: 인증 번호 필드 디자인 개편중
             Spacer()
-                .frame(height: 284)
             
-            AuthConfirmButton(.signUp)
+            Text("회원가입")
+                .modifier(AuthView.AuthButtonModifier())
                 
-            
             Spacer()
         }
     }

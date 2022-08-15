@@ -14,14 +14,12 @@ struct SignInFieldView: View {
     var body: some View {
         VStack(spacing: 15) {
             
-                TextFieldView("아이디(이메일 주소)", $email)
-                    .padding([.horizontal], 20)
-                
-                TextFieldView("비밀번호", $password)
-                    .padding([.horizontal], 20)
+            TextFieldView("아이디(이메일 주소)", $email)
+                .padding([.horizontal], 20)
             
-                
-            
+            TextFieldView("비밀번호", $password)
+                .padding([.horizontal], 20)
+               
         }
     }
 }

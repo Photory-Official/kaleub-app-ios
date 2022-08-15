@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B128DADE28AA9AAB0018F084 /* SignInViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B128DADD28AA9AAB0018F084 /* SignInViewModel.swift */; };
 		B16314712866C4D6009C7595 /* FeedBodyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B16314702866C4D6009C7595 /* FeedBodyView.swift */; };
 		B16314742866E898009C7595 /* FeedReadView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B16314732866E898009C7595 /* FeedReadView.swift */; };
 		B16E62FD286371AC005E0984 /* HomeBodyFloatingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B16E62FC286371AC005E0984 /* HomeBodyFloatingView.swift */; };
@@ -26,11 +27,9 @@
 		B1D799F8286189600035661C /* TextFieldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1D799F7286189600035661C /* TextFieldView.swift */; };
 		B1D799FA28618A620035661C /* SignUpFieldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1D799F928618A620035661C /* SignUpFieldView.swift */; };
 		B1D799FC28618A8F0035661C /* SignUpViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1D799FB28618A8F0035661C /* SignUpViewModel.swift */; };
-		B1D79A0128618C0C0035661C /* BackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1D79A0028618C0C0035661C /* BackgroundView.swift */; };
 		B1D79A0528618DC80035661C /* SignInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1D79A0428618DC80035661C /* SignInView.swift */; };
 		B1D79A0728618E810035661C /* SignInFieldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1D79A0628618E810035661C /* SignInFieldView.swift */; };
 		B1D79A092861902C0035661C /* SignHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1D79A082861902C0035661C /* SignHeaderView.swift */; };
-		B1D79A0B286193810035661C /* AuthConfirmButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1D79A0A286193810035661C /* AuthConfirmButton.swift */; };
 		B1D79A0E2861A0AC0035661C /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1D79A0D2861A0AC0035661C /* HomeView.swift */; };
 		B1D79A102861A11B0035661C /* HomeHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1D79A0F2861A11B0035661C /* HomeHeaderView.swift */; };
 		B1D79A142861AC590035661C /* HomeBodyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1D79A132861AC590035661C /* HomeBodyView.swift */; };
@@ -57,6 +56,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		B128DADD28AA9AAB0018F084 /* SignInViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewModel.swift; sourceTree = "<group>"; };
 		B16314702866C4D6009C7595 /* FeedBodyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedBodyView.swift; sourceTree = "<group>"; };
 		B16314732866E898009C7595 /* FeedReadView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedReadView.swift; sourceTree = "<group>"; };
 		B16E62FC286371AC005E0984 /* HomeBodyFloatingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeBodyFloatingView.swift; sourceTree = "<group>"; };
@@ -75,11 +75,9 @@
 		B1D799F7286189600035661C /* TextFieldView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldView.swift; sourceTree = "<group>"; };
 		B1D799F928618A620035661C /* SignUpFieldView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpFieldView.swift; sourceTree = "<group>"; };
 		B1D799FB28618A8F0035661C /* SignUpViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewModel.swift; sourceTree = "<group>"; };
-		B1D79A0028618C0C0035661C /* BackgroundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundView.swift; sourceTree = "<group>"; };
 		B1D79A0428618DC80035661C /* SignInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInView.swift; sourceTree = "<group>"; };
 		B1D79A0628618E810035661C /* SignInFieldView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInFieldView.swift; sourceTree = "<group>"; };
 		B1D79A082861902C0035661C /* SignHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignHeaderView.swift; sourceTree = "<group>"; };
-		B1D79A0A286193810035661C /* AuthConfirmButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthConfirmButton.swift; sourceTree = "<group>"; };
 		B1D79A0D2861A0AC0035661C /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		B1D79A0F2861A11B0035661C /* HomeHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeHeaderView.swift; sourceTree = "<group>"; };
 		B1D79A132861AC590035661C /* HomeBodyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeBodyView.swift; sourceTree = "<group>"; };
@@ -139,7 +137,6 @@
 			isa = PBXGroup;
 			children = (
 				B1D79A082861902C0035661C /* SignHeaderView.swift */,
-				B1D79A0A286193810035661C /* AuthConfirmButton.swift */,
 			);
 			path = Commons;
 			sourceTree = "<group>";
@@ -147,6 +144,7 @@
 		B18B404928AA20AF0049D04C /* SignIn */ = {
 			isa = PBXGroup;
 			children = (
+				B128DADD28AA9AAB0018F084 /* SignInViewModel.swift */,
 				B1D79A0428618DC80035661C /* SignInView.swift */,
 				B1D79A0628618E810035661C /* SignInFieldView.swift */,
 			);
@@ -188,7 +186,6 @@
 			isa = PBXGroup;
 			children = (
 				B1D799F7286189600035661C /* TextFieldView.swift */,
-				B1D79A0028618C0C0035661C /* BackgroundView.swift */,
 				B18B404228A9F45D0049D04C /* ColorSet.swift */,
 			);
 			path = Common;
@@ -360,14 +357,13 @@
 				B1D799FA28618A620035661C /* SignUpFieldView.swift in Sources */,
 				B1D79A102861A11B0035661C /* HomeHeaderView.swift in Sources */,
 				B16E630028637354005E0984 /* HomeBodyPopUpView.swift in Sources */,
+				B128DADE28AA9AAB0018F084 /* SignInViewModel.swift in Sources */,
 				B1D79A0728618E810035661C /* SignInFieldView.swift in Sources */,
 				B18F39F82864D3790016531D /* FeedHeaderView.swift in Sources */,
-				B1D79A0B286193810035661C /* AuthConfirmButton.swift in Sources */,
 				B1D79A182861B32B0035661C /* HomeBodyHeaderView.swift in Sources */,
 				B1AEE5ED28682F4400BFC0E4 /* FeedWriteView.swift in Sources */,
 				B16E62FD286371AC005E0984 /* HomeBodyFloatingView.swift in Sources */,
 				B18B404328A9F45D0049D04C /* ColorSet.swift in Sources */,
-				B1D79A0128618C0C0035661C /* BackgroundView.swift in Sources */,
 				B1D799F528617A740035661C /* SignUpView.swift in Sources */,
 				B1D79A1A2861BAA90035661C /* HomeBodyGridView.swift in Sources */,
 				B1D799F8286189600035661C /* TextFieldView.swift in Sources */,

@@ -11,11 +11,11 @@ struct SignUpView: View {
     
     var body: some View {
         ZStack {
-            // NOTE: background의 경우에는 나중에 테마를 추가하면서 viewModel을 따로 만들 예정
-            BackgroundView("background")
-            
             SignUpFieldView()
             
+        }
+        .background {
+            Image("app.background")
         }
     }
 }
