@@ -15,6 +15,7 @@
 		B18B404128A9F3EB0049D04C /* PhotorySDK.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B18B403F28A9F3EB0049D04C /* PhotorySDK.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		B18B404328A9F45D0049D04C /* ColorSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = B18B404228A9F45D0049D04C /* ColorSet.swift */; };
 		B18B404528AA06ED0049D04C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B18B404428AA06ED0049D04C /* AppDelegate.swift */; };
+		B18B404B28AA20BE0049D04C /* AuthView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B18B404A28AA20BE0049D04C /* AuthView.swift */; };
 		B18F39F52864D2D20016531D /* FeedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B18F39F42864D2D20016531D /* FeedView.swift */; };
 		B18F39F82864D3790016531D /* FeedHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B18F39F72864D3790016531D /* FeedHeaderView.swift */; };
 		B1AEE5E92868177700BFC0E4 /* RoomInfoEditPopUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1AEE5E82868177700BFC0E4 /* RoomInfoEditPopUpView.swift */; };
@@ -29,7 +30,7 @@
 		B1D79A0528618DC80035661C /* SignInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1D79A0428618DC80035661C /* SignInView.swift */; };
 		B1D79A0728618E810035661C /* SignInFieldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1D79A0628618E810035661C /* SignInFieldView.swift */; };
 		B1D79A092861902C0035661C /* SignHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1D79A082861902C0035661C /* SignHeaderView.swift */; };
-		B1D79A0B286193810035661C /* AuthenticationButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1D79A0A286193810035661C /* AuthenticationButton.swift */; };
+		B1D79A0B286193810035661C /* AuthConfirmButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1D79A0A286193810035661C /* AuthConfirmButton.swift */; };
 		B1D79A0E2861A0AC0035661C /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1D79A0D2861A0AC0035661C /* HomeView.swift */; };
 		B1D79A102861A11B0035661C /* HomeHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1D79A0F2861A11B0035661C /* HomeHeaderView.swift */; };
 		B1D79A142861AC590035661C /* HomeBodyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1D79A132861AC590035661C /* HomeBodyView.swift */; };
@@ -63,6 +64,7 @@
 		B18B403F28A9F3EB0049D04C /* PhotorySDK.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = PhotorySDK.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B18B404228A9F45D0049D04C /* ColorSet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorSet.swift; sourceTree = "<group>"; };
 		B18B404428AA06ED0049D04C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		B18B404A28AA20BE0049D04C /* AuthView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthView.swift; sourceTree = "<group>"; };
 		B18F39F42864D2D20016531D /* FeedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedView.swift; sourceTree = "<group>"; };
 		B18F39F72864D3790016531D /* FeedHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedHeaderView.swift; sourceTree = "<group>"; };
 		B1AEE5E82868177700BFC0E4 /* RoomInfoEditPopUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomInfoEditPopUpView.swift; sourceTree = "<group>"; };
@@ -77,7 +79,7 @@
 		B1D79A0428618DC80035661C /* SignInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInView.swift; sourceTree = "<group>"; };
 		B1D79A0628618E810035661C /* SignInFieldView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInFieldView.swift; sourceTree = "<group>"; };
 		B1D79A082861902C0035661C /* SignHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignHeaderView.swift; sourceTree = "<group>"; };
-		B1D79A0A286193810035661C /* AuthenticationButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationButton.swift; sourceTree = "<group>"; };
+		B1D79A0A286193810035661C /* AuthConfirmButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthConfirmButton.swift; sourceTree = "<group>"; };
 		B1D79A0D2861A0AC0035661C /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		B1D79A0F2861A11B0035661C /* HomeHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeHeaderView.swift; sourceTree = "<group>"; };
 		B1D79A132861AC590035661C /* HomeBodyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeBodyView.swift; sourceTree = "<group>"; };
@@ -133,6 +135,24 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
+		B18B404828AA20790049D04C /* Commons */ = {
+			isa = PBXGroup;
+			children = (
+				B1D79A082861902C0035661C /* SignHeaderView.swift */,
+				B1D79A0A286193810035661C /* AuthConfirmButton.swift */,
+			);
+			path = Commons;
+			sourceTree = "<group>";
+		};
+		B18B404928AA20AF0049D04C /* SignIn */ = {
+			isa = PBXGroup;
+			children = (
+				B1D79A0428618DC80035661C /* SignInView.swift */,
+				B1D79A0628618E810035661C /* SignInFieldView.swift */,
+			);
+			path = SignIn;
+			sourceTree = "<group>";
+		};
 		B18F39F32864D2BB0016531D /* Feed */ = {
 			isa = PBXGroup;
 			children = (
@@ -156,10 +176,10 @@
 		B1D799F328617A1C0035661C /* Auth */ = {
 			isa = PBXGroup;
 			children = (
-				B1D79A082861902C0035661C /* SignHeaderView.swift */,
-				B1D79A0A286193810035661C /* AuthenticationButton.swift */,
-				B1D79A0328618DBB0035661C /* SingIn */,
+				B18B404A28AA20BE0049D04C /* AuthView.swift */,
+				B18B404928AA20AF0049D04C /* SignIn */,
 				B1D79A0228618D710035661C /* SignUp */,
+				B18B404828AA20790049D04C /* Commons */,
 			);
 			name = Auth;
 			sourceTree = "<group>";
@@ -182,15 +202,6 @@
 				B1D799F928618A620035661C /* SignUpFieldView.swift */,
 			);
 			name = SignUp;
-			sourceTree = "<group>";
-		};
-		B1D79A0328618DBB0035661C /* SingIn */ = {
-			isa = PBXGroup;
-			children = (
-				B1D79A0428618DC80035661C /* SignInView.swift */,
-				B1D79A0628618E810035661C /* SignInFieldView.swift */,
-			);
-			path = SingIn;
 			sourceTree = "<group>";
 		};
 		B1D79A0C2861A0A00035661C /* HomeView */ = {
@@ -351,7 +362,7 @@
 				B16E630028637354005E0984 /* HomeBodyPopUpView.swift in Sources */,
 				B1D79A0728618E810035661C /* SignInFieldView.swift in Sources */,
 				B18F39F82864D3790016531D /* FeedHeaderView.swift in Sources */,
-				B1D79A0B286193810035661C /* AuthenticationButton.swift in Sources */,
+				B1D79A0B286193810035661C /* AuthConfirmButton.swift in Sources */,
 				B1D79A182861B32B0035661C /* HomeBodyHeaderView.swift in Sources */,
 				B1AEE5ED28682F4400BFC0E4 /* FeedWriteView.swift in Sources */,
 				B16E62FD286371AC005E0984 /* HomeBodyFloatingView.swift in Sources */,
@@ -360,6 +371,7 @@
 				B1D799F528617A740035661C /* SignUpView.swift in Sources */,
 				B1D79A1A2861BAA90035661C /* HomeBodyGridView.swift in Sources */,
 				B1D799F8286189600035661C /* TextFieldView.swift in Sources */,
+				B18B404B28AA20BE0049D04C /* AuthView.swift in Sources */,
 				B1AEE5EF28684D0700BFC0E4 /* CodeSharePopUpView.swift in Sources */,
 				B1D79A092861902C0035661C /* SignHeaderView.swift in Sources */,
 				B1D799FC28618A8F0035661C /* SignUpViewModel.swift in Sources */,

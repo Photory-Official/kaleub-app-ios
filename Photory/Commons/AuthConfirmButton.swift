@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct AuthenticationButton: View {
+struct AuthConfirmButton: View {
     let type: ActionType
     
     enum ActionType {
@@ -48,6 +48,6 @@ struct AuthenticationButton: View {
 
 struct SignFooterView_Previews: PreviewProvider {
     static var previews: some View {
-        AuthenticationButton(.signIn)
+        AuthConfirmButton(.signIn)
     }
 }

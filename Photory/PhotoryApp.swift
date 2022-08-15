@@ -17,7 +17,7 @@ struct PhotoryApp: App {
             if userToken != nil {
                 HomeView()
             } else {
-                SignInView()
+                AuthView()
             }
         }
     }

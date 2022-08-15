@@ -53,7 +53,7 @@ struct SignUpFieldView: View {
             Spacer()
                 .frame(height: 284)
             
-            AuthenticationButton(.signUp)
+            AuthConfirmButton(.signUp)
                 
             
             Spacer()
