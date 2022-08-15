@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "B1FDB045285A063300B72846"
-               BuildableName = "Kaleub.app"
-               BlueprintName = "Kaleub"
-               ReferencedContainer = "container:Kaleub.xcodeproj">
+               BuildableName = "Photory.app"
+               BlueprintName = "Photory"
+               ReferencedContainer = "container:Photory.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -55,9 +55,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "B1FDB045285A063300B72846"
-            BuildableName = "Kaleub.app"
-            BlueprintName = "Kaleub"
-            ReferencedContainer = "container:Kaleub.xcodeproj">
+            BuildableName = "Photory.app"
+            BlueprintName = "Photory"
+            ReferencedContainer = "container:Photory.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </LaunchAction>
@@ -72,9 +72,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "B1FDB045285A063300B72846"
-            BuildableName = "Kaleub.app"
-            BlueprintName = "Kaleub"
-            ReferencedContainer = "container:Kaleub.xcodeproj">
+            BuildableName = "Photory.app"
+            BlueprintName = "Photory"
+            ReferencedContainer = "container:Photory.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

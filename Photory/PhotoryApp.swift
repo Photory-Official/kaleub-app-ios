@@ -6,10 +6,10 @@
 //
 
 import SwiftUI
-import KaleubSDK
+import PhotorySDK
 
 @main
-struct KaleubApp: App {
+struct PhotoryApp: App {
     var body: some Scene {
         WindowGroup {
             
