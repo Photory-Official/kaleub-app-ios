@@ -7,13 +7,14 @@
 
 import SwiftUI
 import Combine
+import PhotorySDK
 
 // NOTE: 실제 데이터를 viewModel로 연결하여 사용합니다.
 class HomeBodyViewModel: ObservableObject {
     /// HomeBodyFloatingView를 띄우는 변수
-    @Published var isShowingFloatingView: Bool = false
+    @Published var showsFloatingView: Bool = false
     /// HomeBodyPopUpView를 띄우는 변수
-    @Published var isShowingPopUpView: Bool = false
+    @Published var showsPopUpView: Bool = false
     /// HomeBodyPopUpView의 타입을 정하는 변수
     var popUpType: PopUpType = .create
     
@@ -43,8 +44,25 @@ class HomeBodyViewModel: ObservableObject {
     
     /// PopView가 나타나 있다면 FloatingView는 나타나지 않는 로직을 구현하는 함수
     func showingFloatingView() {
-        isShowingFloatingView = isShowingPopUpView
+        showsFloatingView = showsPopUpView
         ? false
         : true
+    }
+    
+    
+    /// 방생성 버튼을 클릭했을 때의 액션
+    func didTapCreateButton(title: String, password: String) {
+        // 방제목 길이 제한 4~6, 비밀번호 4~12
+        if (4...6) ~= title.count && (4...12) ~= password.count {
+            // NOTE: - create Room
+            Photory.createRoom(title: title, password: password) { result in
+                // NOTE: - fetchRoom
+                print("✅ createRoom Success")
+                self.showsPopUpView = false
+            }
+        } else {
+            print("🚨 createRoom fail")
+        }
+        
     }
 }

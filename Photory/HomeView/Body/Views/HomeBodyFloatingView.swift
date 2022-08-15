@@ -14,7 +14,7 @@ struct HomeBodyFloatingView: View {
         VStack(alignment: .trailing) {
             Spacer()
             
-            if viewModel.isShowingFloatingView {
+            if viewModel.showsFloatingView {
                 Button {
                     didTapFloatingMenu(.join)
                 } label: {
@@ -54,10 +54,10 @@ struct HomeBodyFloatingView: View {
     }
     
     func didTapFloatingMenu(_ type: HomeBodyViewModel.PopUpType) {
-        viewModel.isShowingFloatingView = false
+        viewModel.showsFloatingView = false
         
         viewModel.popUpType = type
-        viewModel.isShowingPopUpView = true
+        viewModel.showsPopUpView = true
     }
 }
 

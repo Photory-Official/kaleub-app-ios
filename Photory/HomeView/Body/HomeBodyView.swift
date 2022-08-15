@@ -48,7 +48,7 @@ struct HomeBodyView: View {
                 .shadow(color: ColorSet.shadowColor, radius: 4, x: 0, y: 4)
                 .overlay {
                     ZStack {
-                        if viewModel.isShowingPopUpView {
+                        if viewModel.showsPopUpView {
                             
                             HomeBodyPopUpView()
                         }
