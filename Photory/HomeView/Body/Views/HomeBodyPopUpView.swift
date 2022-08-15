@@ -60,10 +60,14 @@ struct HomeBodyPopUpView: View {
                             .padding([.horizontal], 27)
                         
                         Button {
-                            // NOTE: - action
-                            viewModel.didTapCreateButton(title: name, password: password)
+                            viewModel.didTapConfirmButton(title: name, password: password)
                         } label: {
-                            Text("✅ 방생성")
+                            if viewModel.popUpType == .create {
+                                Text("✅ 방생성")
+                            } else if viewModel.popUpType == .join {
+                                Text("🥳 방참여")
+                            }
+                            
                         }
 
                         Spacer()

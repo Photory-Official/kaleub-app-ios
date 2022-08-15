@@ -37,12 +37,13 @@ struct HomeBodyView: View {
                 ScrollView {
                     LazyVGrid(columns: type.columns) {
                         // TODO: 데이터 연결하고 ForEach로 변경합니다.
-                        
-    //                    HomeBodyGridView(
-    //                        title: "그 해 우리는",
-    //                        date: "3.3.3",
-    //                        participantsCount: 1
-    //                    )
+                        ForEach(viewModel.rooms, id: \.self.id) { room in
+                            HomeBodyGridView(
+                                title: "그 해 우리는",
+                                date: "3.3.3",
+                                participantsCount: 1
+                            )
+                        }
                     }
                 }
                 .shadow(color: ColorSet.shadowColor, radius: 4, x: 0, y: 4)

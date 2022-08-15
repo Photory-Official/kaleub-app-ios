@@ -11,6 +11,7 @@ import PhotorySDK
 
 // NOTE: 실제 데이터를 viewModel로 연결하여 사용합니다.
 class HomeBodyViewModel: ObservableObject {
+    @Published var rooms: [Room] = []
     /// HomeBodyFloatingView를 띄우는 변수
     @Published var showsFloatingView: Bool = false
     /// HomeBodyPopUpView를 띄우는 변수
@@ -49,20 +50,32 @@ class HomeBodyViewModel: ObservableObject {
         : true
     }
     
-    
-    /// 방생성 버튼을 클릭했을 때의 액션
-    func didTapCreateButton(title: String, password: String) {
-        // 방제목 길이 제한 4~6, 비밀번호 4~12
-        if (4...6) ~= title.count && (4...12) ~= password.count {
-            // NOTE: - create Room
-            Photory.createRoom(title: title, password: password) { result in
-                // NOTE: - fetchRoom
-                print("✅ createRoom Success")
-                self.showsPopUpView = false
-            }
-        } else {
-            print("🚨 createRoom fail")
-        }
+    /// popUp 하단의 버튼을 클릭했을 때의 액션
+    func didTapConfirmButton(title: String, password: String) {
+        guard (4...12) ~= password.count else { return }
         
+        
+        switch popUpType {
+        case .join:
+            guard !title.isEmpty else { return }
+            // NOTE: - join
+        case .create:
+            guard (4...6) ~= title.count else { return }
+            
+            Photory.createRoom(title: title, password: password) { result in
+                print("✅ createRoom Success")
+                // NOTE: - fetchRoom
+                self.showsPopUpView = false
+                
+                Photory.fetchRoom { result in
+                    switch result {
+                    case .success(let response):
+                        self.rooms = response
+                    case .failure(_):
+                        print("🚨 error: fetchRoom Error")
+                    }
+                }
+            }
+        }
     }
 }

@@ -10,10 +10,15 @@ import PhotorySDK
 
 @main
 struct PhotoryApp: App {
+    @State var userToken: String? = Photory.userToken
+    
     var body: some Scene {
         WindowGroup {
-            
-            HomeView()
+            if userToken != nil {
+                HomeView()
+            } else {
+                SignInView()
+            }
         }
     }
     
