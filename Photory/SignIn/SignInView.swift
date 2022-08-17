@@ -6,9 +6,11 @@
 //
 
 import SwiftUI
+import PhotorySDK
 
 struct SignInView: View {
-    @StateObject var viewModel = SignInViewModel()
+    @EnvironmentObject var viewModel: SignInViewModel
+    @EnvironmentObject var appViewModel: PhotoryAppViewModel
     
     var body: some View {
         NavigationView {
@@ -17,17 +19,25 @@ struct SignInView: View {
                     SignHeaderView("어서와!")
                     
                     SignInFieldView()
+                        .environmentObject(viewModel)
                     
                     Spacer()
                     
                     Button {
                         // NOTE: - 로그인 액션
+                        viewModel.didTapLoginButton(
+                            email: viewModel.email,
+                            password: viewModel.password
+                        )
+                        
+                        viewModel.showsWelcomeAlert = true
+                        appViewModel.userToken = "test"
+                        
                     } label: {
                         Text("로그인")
                             .modifier(AuthView.AuthButtonModifier())
                     }
 
-                    
                     NavigationLink {
                         SignUpView()
                             .environmentObject(SignUpViewModel())
@@ -41,7 +51,15 @@ struct SignInView: View {
             .background {
                 Image("app.background")
             }
-            .navigationBarHidden(true)
+            .alert("🎉Welcome🎉", isPresented: $viewModel.showsWelcomeAlert) {
+                Button {
+                    // NOTE: - Scene 교체?
+                    
+                } label: {
+                    Text("🥳 포토리 시작하기")
+                }
+
+            }.navigationBarHidden(true)
         }
     }
     

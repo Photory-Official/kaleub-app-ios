@@ -8,18 +8,17 @@
 import SwiftUI
 
 struct SignInFieldView: View {
-    @State var email: String = ""
-    @State var password: String = ""
+    @EnvironmentObject var viewModel: SignInViewModel
     
     var body: some View {
         VStack(spacing: 15) {
             
-            TextFieldView("아이디(이메일 주소)", $email)
+            TextFieldView("아이디(이메일 주소)", $viewModel.email)
                 .padding([.horizontal], 20)
             
-            TextFieldView("비밀번호", $password)
+            TextFieldView("비밀번호", $viewModel.password)
                 .padding([.horizontal], 20)
-               
+                
         }
     }
 }

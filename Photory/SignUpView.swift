@@ -12,7 +12,7 @@ struct SignUpView: View {
     var body: some View {
         ZStack {
             SignUpFieldView()
-            
+                .environmentObject(SignUpViewModel())
         }
         .background {
             Image("app.background")

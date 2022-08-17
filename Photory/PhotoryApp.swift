@@ -10,16 +10,18 @@ import PhotorySDK
 
 @main
 struct PhotoryApp: App {
-    @State var userToken: String? = Photory.userToken
+    @UIApplicationDelegateAdaptor var appDelegate: AppDelegate
     
     var body: some Scene {
         WindowGroup {
-            if userToken != nil {
-                HomeView()
-            } else {
-                AuthView()
-            }
+            HomeView()
+                .environmentObject(PhotoryAppViewModel())
         }
     }
-    
+}
+
+class PhotoryAppViewModel: ObservableObject {
+    @Published var userToken: String? = Photory.userToken {
+        didSet { print("didSet \(userToken)") }
+    }
 }
