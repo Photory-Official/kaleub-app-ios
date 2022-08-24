@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B12672CD28B6193600C63ACC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B12672CC28B6193600C63ACC /* SceneDelegate.swift */; };
 		B128DADE28AA9AAB0018F084 /* SignInViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B128DADD28AA9AAB0018F084 /* SignInViewModel.swift */; };
 		B16314712866C4D6009C7595 /* FeedBodyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B16314702866C4D6009C7595 /* FeedBodyView.swift */; };
 		B16314742866E898009C7595 /* FeedReadView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B16314732866E898009C7595 /* FeedReadView.swift */; };
@@ -56,6 +57,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		B12672CC28B6193600C63ACC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		B12672CE28B61BBD00C63ACC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		B128DADD28AA9AAB0018F084 /* SignInViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewModel.swift; sourceTree = "<group>"; };
 		B16314702866C4D6009C7595 /* FeedBodyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedBodyView.swift; sourceTree = "<group>"; };
 		B16314732866E898009C7595 /* FeedReadView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedReadView.swift; sourceTree = "<group>"; };
@@ -249,7 +252,9 @@
 		B1FDB048285A063300B72846 /* Photory */ = {
 			isa = PBXGroup;
 			children = (
+				B12672CE28B61BBD00C63ACC /* Info.plist */,
 				B18B404428AA06ED0049D04C /* AppDelegate.swift */,
+				B12672CC28B6193600C63ACC /* SceneDelegate.swift */,
 				B1FDB049285A063300B72846 /* PhotoryApp.swift */,
 				B1D79A0C2861A0A00035661C /* HomeView */,
 				B1D799F328617A1C0035661C /* Auth */,
@@ -361,6 +366,7 @@
 				B1D79A0728618E810035661C /* SignInFieldView.swift in Sources */,
 				B18F39F82864D3790016531D /* FeedHeaderView.swift in Sources */,
 				B1D79A182861B32B0035661C /* HomeBodyHeaderView.swift in Sources */,
+				B12672CD28B6193600C63ACC /* SceneDelegate.swift in Sources */,
 				B1AEE5ED28682F4400BFC0E4 /* FeedWriteView.swift in Sources */,
 				B16E62FD286371AC005E0984 /* HomeBodyFloatingView.swift in Sources */,
 				B18B404328A9F45D0049D04C /* ColorSet.swift in Sources */,
@@ -510,7 +516,7 @@
 				DEVELOPMENT_TEAM = "";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_FILE = Photory/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -540,7 +546,7 @@
 				DEVELOPMENT_TEAM = "";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_FILE = Photory/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";

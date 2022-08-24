@@ -10,7 +10,7 @@ import PhotorySDK
 
 struct SignInView: View {
     @EnvironmentObject var viewModel: SignInViewModel
-    @EnvironmentObject var appViewModel: PhotoryAppViewModel
+//    @EnvironmentObject var appViewModel: PhotoryAppViewModel
     
     var body: some View {
         NavigationView {
@@ -31,7 +31,7 @@ struct SignInView: View {
                         )
                         
                         viewModel.showsWelcomeAlert = true
-                        appViewModel.userToken = "test"
+//                        appViewModel.userToken = "test"
                         
                     } label: {
                         Text("로그인")

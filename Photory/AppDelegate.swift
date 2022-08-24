@@ -8,13 +8,14 @@
 import UIKit
 import PhotorySDK
 
+@main
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
-    var window: UIWindow?
+
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        Photory.userToken = nil
-        print("Photory.userToken \(Photory.userToken)")
+        // Override point for customization after application launch.
+        print("\(#function)")
         
         return true
     }
@@ -27,5 +28,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
 
     func application(_ application: UIApplication, didDiscardSceneSessions sceneSessions: Set<UISceneSession>) { }
+
 
 }
