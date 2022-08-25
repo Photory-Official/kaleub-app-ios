@@ -67,7 +67,6 @@ struct HomeBodyPopUpView: View {
                             } else if viewModel.popUpType == .join {
                                 Text("🥳 방참여")
                             }
-                            
                         }
 
                         Spacer()

@@ -54,11 +54,24 @@ class HomeBodyViewModel: ObservableObject {
     func didTapConfirmButton(title: String, password: String) {
         guard (4...12) ~= password.count else { return }
         
-        
         switch popUpType {
         case .join:
             guard !title.isEmpty else { return }
             // NOTE: - join
+            Photory.enterRoom(code: title, password: password) { result in
+                print("✅ join Success")
+                // NOTE: - fetchRoom
+                self.showsPopUpView = false
+                
+                Photory.fetchRoom { result in
+                    switch result {
+                    case .success(let response):
+                        self.rooms = response
+                    case .failure(_):
+                        print("🚨 error: fetchRoom Error")
+                    }
+                }
+            }
         case .create:
             guard (4...6) ~= title.count else { return }
             
