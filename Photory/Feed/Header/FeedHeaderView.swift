@@ -68,11 +68,13 @@ struct FeedHeaderView: View {
                         Button {
                             // TODO: 초대코드 복사
                             viewModel.isShowingCodeSharePopUpView.toggle()
+                            viewModel.share()
                         } label: {
                             Image("app.invite.button")
                                 .resizable()
                                 .frame(width: 48, height: 48, alignment: .center)
                         }
+                        .activitySheet($viewModel.item)
                     }
                 }
             }
