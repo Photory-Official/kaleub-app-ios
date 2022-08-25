@@ -21,14 +21,15 @@ struct FeedHeaderView: View {
                     .font(.system(size: 28))
                     .frame(height: 28)
                 
-                // NOTE: 앱적허용,, UI구성 저렇게 하는 방법을 더 고민해 봐야겠습니다.
+                // NOTE: UIBezier사용해서 구현 가능할 듯
                 Menu {
-                    Button {
-                        viewModel.popUpType = .editTitle
-                        viewModel.isShowingRoomInfoEditPopUpView = true
-                    } label: {
-                        Text("방 이름 수정")
-                    }
+                    // FIXME: - 방이름 부분은 서버에서 구현되지 않았습니다. 나중에 결제 구현하면서 유료로
+//                    Button {
+//                        viewModel.popUpType = .editTitle
+//                        viewModel.isShowingRoomInfoEditPopUpView = true
+//                    } label: {
+//                        Text("방 이름 수정")
+//                    }
                     
                     Button {
                         viewModel.popUpType = .editPassword
