@@ -10,6 +10,7 @@ import PhotorySDK
 
 struct FeedWriteView: View {
     @Environment(\.presentationMode) var presentationMode
+    @EnvironmentObject var viewModel: FeedViewModel
     
     let type: WriteType
     
@@ -17,18 +18,9 @@ struct FeedWriteView: View {
         case create
         case update
     }
-    
-    @State var title: String = ""
-    @State var description: String = ""
-       
-    init(
-        _ type: WriteType,
-        title: String = "",
-        description: String = ""
-    ) {
+
+    init(type: WriteType) {
         self.type = type
-        _title = State(initialValue: title)
-        _description = State(initialValue: description)
     }
     
     var body: some View {
@@ -47,8 +39,14 @@ struct FeedWriteView: View {
                     Spacer()
                     
                     Button {
-                        // TODO: update feed
+                        
                         presentationMode.wrappedValue.dismiss()
+                        // TODO: update feedId 실제 아이디 사용
+                        viewModel.updateFeed(
+                            feedId: 1,
+                            title: viewModel.feed?.title ?? "",
+                            content: viewModel.feed?.content ?? ""
+                        )
                     } label: {
                         Text("완료")
                             .foregroundColor(.black)
@@ -67,7 +65,7 @@ struct FeedWriteView: View {
             }
             
             VStack {
-                TextField("제목을 입력하세요", text: $title) {
+                TextField("제목을 입력하세요", text: $viewModel.titleText) {
                     
                 }
                 .frame(height: 54)
@@ -75,9 +73,9 @@ struct FeedWriteView: View {
                 Divider()
                 
                 ZStack {
-                    TextEditor(text: $description)
+                    TextEditor(text: $viewModel.descriptionText)
                         .overlay {
-                            if description.isEmpty {
+                            if viewModel.descriptionText.isEmpty {
                                 Text("내용을 입력하세요")
                                     .font(.caption2)
                                     .foregroundColor(.secondary)
@@ -96,7 +94,7 @@ struct FeedWriteView: View {
             }
             
             ToolbarItem(placement: .navigationBarTrailing) {
-                if !description.isEmpty && !title.isEmpty {
+                if !viewModel.descriptionText.isEmpty && !viewModel.titleText.isEmpty {
                     Button {
                         // TODO: server request
                         print("didTap 버튼")
@@ -113,9 +111,9 @@ struct FeedWriteView: View {
 struct FeedCreateView_Previews: PreviewProvider {
     static var previews: some View {
         NavigationView {
-            FeedWriteView(.create, title: "", description: "")
+            FeedWriteView(type: .create)
         }
         
-        FeedWriteView(.update, title: "a", description: "a")
+        FeedWriteView(type: .update)
     }
 }

@@ -10,9 +10,9 @@ import Combine
 import PhotorySDK
 
 class FeedViewModel: ObservableObject {
-    @Published var feed: Feed?
-    @Published var room: Room? // TODO: - 화면 전환 시, Room 정보 받아와야 한다.
-    @Published var feedContent: FeedContent?
+    @Published var feed: Feed? // 피드 상세: 단일 피드
+    @Published var room: Room? // TODO: - 화면 전환 시, Room 정보 받아와야 함.
+    @Published var feedContent: FeedContent? // 룸에 나타나는 피드 리스트: 룸에서 받아온 정보를 바탕으로 히드 리스트를 세팅
     
     @Published var isShowingRoomInfoEditPopUpView: Bool = false
     @Published var isShowingWriteView: Bool = false
@@ -20,6 +20,10 @@ class FeedViewModel: ObservableObject {
     
     /// 공유할 아이템
     @Published var item: ActivityItem?
+    
+    // MARK: - Write
+    @Published var titleText: String = "" // Write페이지에서 title
+    @Published var descriptionText: String = "" // Write페이지에서 description
     
     var popUpType: PopUpType = .editTitle
     
@@ -80,5 +84,31 @@ class FeedViewModel: ObservableObject {
             🌿 방 비밀번호: \(password)
         """
         item = ActivityItem(items: items)
+    }
+    
+    func detailFeed() {
+        let feedId = feedContent!.contents[0].feedId
+        Photory.feedDetail(feedId: feedId) { result in
+            switch result {
+            case .success(let feed):
+                self.feed = feed
+                break
+            case .failure(let error):
+                print("🚨Error: \(error.localizedDescription)")
+            }
+        }
+    }
+    
+    func updateFeed(feedId: Int64, title: String, content: String) {
+        let feedId = feedContent!.contents[0].feedId
+        Photory.updateFeed(feedId: feedId, title: title, content: content) { result in
+            switch result {
+            case .success(let feed):
+                print("\(feed.content)")
+                break
+            case .failure(let error):
+                print("🚨Error: \(error.localizedDescription)")
+            }
+        }
     }
 }

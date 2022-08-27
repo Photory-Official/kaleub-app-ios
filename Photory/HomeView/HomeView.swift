@@ -33,8 +33,7 @@ struct HomeView: View {
                 ToolbarItem(placement: .principal) {
                     Image("app.logo")
                         .resizable()
-                        .aspectRatio(contentMode: .fit)
-                    
+                        .aspectRatio(contentMode: .fit)        
                 }
             }
             .background {
