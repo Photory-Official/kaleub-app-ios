@@ -16,6 +16,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         print("\(#function) \(Photory.userToken)")
+        sleep(1) // NOTE: - 런치 이미지 조금 더 오래보여주면 이쁠것 같아서
         
         return true
     }
