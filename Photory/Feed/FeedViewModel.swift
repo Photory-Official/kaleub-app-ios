@@ -12,6 +12,7 @@ import PhotorySDK
 class FeedViewModel: ObservableObject {
     @Published var feed: Feed?
     @Published var room: Room? // TODO: - 화면 전환 시, Room 정보 받아와야 한다.
+    @Published var feedContent: FeedContent?
     
     @Published var isShowingRoomInfoEditPopUpView: Bool = false
     @Published var isShowingWriteView: Bool = false

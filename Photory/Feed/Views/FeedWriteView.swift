@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import PhotorySDK
 
 struct FeedWriteView: View {
     @Environment(\.presentationMode) var presentationMode
@@ -98,7 +99,7 @@ struct FeedWriteView: View {
                 if !description.isEmpty && !title.isEmpty {
                     Button {
                         // TODO: server request
-                        
+                        print("didTap 버튼")
                     } label: {
                         Text("완료")
                             .foregroundColor(.black)
