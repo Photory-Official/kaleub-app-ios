@@ -22,8 +22,11 @@ class FeedViewModel: ObservableObject {
     @Published var item: ActivityItem?
     
     // MARK: - Write
-    @Published var titleText: String = "" // Write페이지에서 title
-    @Published var descriptionText: String = "" // Write페이지에서 description
+    /// FeedWrite View에서 TextEditor에 들어갈 title
+    @Published var titleText: String = ""
+    /// FeedWrite View에서 TextEditor에 들어갈 description
+    @Published var descriptionText: String = ""
+    
     
     var popUpType: PopUpType = .editTitle
     

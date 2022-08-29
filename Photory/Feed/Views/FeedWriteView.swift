@@ -12,6 +12,8 @@ struct FeedWriteView: View {
     @Environment(\.presentationMode) var presentationMode
     @EnvironmentObject var viewModel: FeedViewModel
     
+    @State var showsPhotoLibrary: Bool = false
+    @State var image = UIImage(named: "app.feed1")
     let type: WriteType
     
     enum WriteType {
@@ -56,13 +58,12 @@ struct FeedWriteView: View {
                 .padding([.horizontal], 21)
             }
             
-            Button {
-                // TODO: 사진 불러오기
-            } label: {
-                Image("app.feed1")
-                    .resizable()
-                    .aspectRatio(contentMode: .fill)
-            }
+            Image(uiImage: self.image!)
+                .resizable()
+                .aspectRatio(contentMode: .fill)
+                .onTapGesture {
+                    showsPhotoLibrary.toggle()
+                }
             
             VStack {
                 TextField("제목을 입력하세요", text: $viewModel.titleText) {
@@ -87,6 +88,9 @@ struct FeedWriteView: View {
             
             Spacer()
             
+        }
+        .sheet(isPresented: $showsPhotoLibrary) {
+            ImagePicker(sourceType: .photoLibrary)
         }
         .toolbar {
             ToolbarItem(placement: .principal) {
