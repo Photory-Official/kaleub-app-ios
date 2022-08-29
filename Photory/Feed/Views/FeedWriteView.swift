@@ -13,7 +13,7 @@ struct FeedWriteView: View {
     @EnvironmentObject var viewModel: FeedViewModel
     
     @State var showsPhotoLibrary: Bool = false
-    @State var image = UIImage(named: "app.feed1")
+    @State var image = UIImage(named: "app.feed1") ?? UIImage()
     let type: WriteType
     
     enum WriteType {
@@ -58,7 +58,7 @@ struct FeedWriteView: View {
                 .padding([.horizontal], 21)
             }
             
-            Image(uiImage: self.image!)
+            Image(uiImage: self.image)
                 .resizable()
                 .aspectRatio(contentMode: .fill)
                 .onTapGesture {
@@ -90,7 +90,7 @@ struct FeedWriteView: View {
             
         }
         .sheet(isPresented: $showsPhotoLibrary) {
-            ImagePicker(sourceType: .photoLibrary)
+            ImagePicker(selectedImage: self.$image, sourceType: .photoLibrary)
         }
         .toolbar {
             ToolbarItem(placement: .principal) {
