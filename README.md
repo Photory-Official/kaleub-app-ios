@@ -1,4 +1,4 @@
-# Photory
+# PhotoryApp
 
 ### 개발 환경
 * iOS 15.0 이상
