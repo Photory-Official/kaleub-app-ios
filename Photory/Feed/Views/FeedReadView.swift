@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import PhotorySDK
 
 struct FeedReadView: View {
     @EnvironmentObject var viewModel: FeedViewModel
@@ -51,7 +52,7 @@ struct FeedReadView: View {
             Spacer()
         }
         .fullScreenCover(isPresented: $viewModel.isShowingWriteView) {
-            FeedWriteView(.update, title: title, description: description)
+            FeedWriteView(type: .update)
         }
         .toolbar {
             ToolbarItem(placement: .principal) {

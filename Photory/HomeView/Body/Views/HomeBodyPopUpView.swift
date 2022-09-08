@@ -59,23 +59,31 @@ struct HomeBodyPopUpView: View {
                             }
                             .padding([.horizontal], 27)
                         
+                        Button {
+                            viewModel.didTapConfirmButton(title: name, password: password)
+                        } label: {
+                            if viewModel.popUpType == .create {
+                                Text("✅ 방생성")
+                            } else if viewModel.popUpType == .join {
+                                Text("🥳 방참여")
+                            }
+                        }
+
                         Spacer()
                     }
                 }
             
             Button {
                 // TODO: cancel
-                viewModel.isShowingPopUpView = false
-                print("didTapTouchButton")
+                viewModel.showsPopUpView = false
+                print("didTap xMarkButton")
             } label: {
                 Image("app.xmark")
                     .resizable()
                     .frame(width: 24, height: 24)
                     .padding(18)
             }
-            
         }
-        
     }
 }
 

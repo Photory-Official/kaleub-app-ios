@@ -89,8 +89,10 @@ struct RoomInfoEditPopUpView: View {
                             
                             Button {
                                 viewModel.isShowingRoomInfoEditPopUpView = false
-                                // TODO: Request Server
-                                
+                                viewModel.changeRoomPassword(
+                                    beforePassword: firstField, // 기존 비밀번호
+                                    afterPassword: secondField // 변경할 비밀번호
+                                )
                             } label: {
                                 Text("확인")
                                     .foregroundColor(.black)
@@ -115,16 +117,3 @@ struct FeedPopUpView_Previews: PreviewProvider {
             .environmentObject(FeedViewModel())
     }
 }
-
-// NOTE: - Legacy
-
-//Button {
-//    viewModel.isShowingPopUpView = false
-//    print("didTapTouchButton")
-//} label: {
-//    Image("app.xmark")
-//        .resizable()
-//        .frame(width: 24, height: 24)
-//        .padding(18)
-//}
-

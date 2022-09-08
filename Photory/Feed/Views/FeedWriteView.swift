@@ -6,28 +6,23 @@
 //
 
 import SwiftUI
+import PhotorySDK
 
 struct FeedWriteView: View {
     @Environment(\.presentationMode) var presentationMode
+    @EnvironmentObject var viewModel: FeedViewModel
     
+    @State var showsPhotoLibrary: Bool = false
+    @State var image = UIImage(named: "app.feed1") ?? UIImage()
     let type: WriteType
     
     enum WriteType {
         case create
         case update
     }
-    
-    @State var title: String = ""
-    @State var description: String = ""
-       
-    init(
-        _ type: WriteType,
-        title: String = "",
-        description: String = ""
-    ) {
+
+    init(type: WriteType) {
         self.type = type
-        _title = State(initialValue: title)
-        _description = State(initialValue: description)
     }
     
     var body: some View {
@@ -46,8 +41,14 @@ struct FeedWriteView: View {
                     Spacer()
                     
                     Button {
-                        // TODO: update feed
+                        
                         presentationMode.wrappedValue.dismiss()
+                        // TODO: update feedId 실제 아이디 사용
+                        viewModel.updateFeed(
+                            feedId: 1,
+                            title: viewModel.feed?.title ?? "",
+                            content: viewModel.feed?.content ?? ""
+                        )
                     } label: {
                         Text("완료")
                             .foregroundColor(.black)
@@ -57,16 +58,15 @@ struct FeedWriteView: View {
                 .padding([.horizontal], 21)
             }
             
-            Button {
-                // TODO: 사진 불러오기
-            } label: {
-                Image("app.feed1")
-                    .resizable()
-                    .aspectRatio(contentMode: .fill)
-            }
+            Image(uiImage: self.image)
+                .resizable()
+                .aspectRatio(contentMode: .fill)
+                .onTapGesture {
+                    showsPhotoLibrary.toggle()
+                }
             
             VStack {
-                TextField("제목을 입력하세요", text: $title) {
+                TextField("제목을 입력하세요", text: $viewModel.titleText) {
                     
                 }
                 .frame(height: 54)
@@ -74,9 +74,9 @@ struct FeedWriteView: View {
                 Divider()
                 
                 ZStack {
-                    TextEditor(text: $description)
+                    TextEditor(text: $viewModel.descriptionText)
                         .overlay {
-                            if description.isEmpty {
+                            if viewModel.descriptionText.isEmpty {
                                 Text("내용을 입력하세요")
                                     .font(.caption2)
                                     .foregroundColor(.secondary)
@@ -89,16 +89,19 @@ struct FeedWriteView: View {
             Spacer()
             
         }
+        .sheet(isPresented: $showsPhotoLibrary) {
+            ImagePicker(selectedImage: self.$image, sourceType: .photoLibrary)
+        }
         .toolbar {
             ToolbarItem(placement: .principal) {
                 Text("작성하기")
             }
             
             ToolbarItem(placement: .navigationBarTrailing) {
-                if !description.isEmpty && !title.isEmpty {
+                if !viewModel.descriptionText.isEmpty && !viewModel.titleText.isEmpty {
                     Button {
                         // TODO: server request
-                        
+                        print("didTap 버튼")
                     } label: {
                         Text("완료")
                             .foregroundColor(.black)
@@ -112,9 +115,9 @@ struct FeedWriteView: View {
 struct FeedCreateView_Previews: PreviewProvider {
     static var previews: some View {
         NavigationView {
-            FeedWriteView(.create, title: "", description: "")
+            FeedWriteView(type: .create)
         }
         
-        FeedWriteView(.update, title: "a", description: "a")
+        FeedWriteView(type: .update)
     }
 }

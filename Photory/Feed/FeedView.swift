@@ -44,7 +44,7 @@ struct FeedView: View {
                     }
                     
                     NavigationLink {
-                        FeedWriteView(.create, title: "", description: "")
+                        FeedWriteView(type: .create)
                             .environmentObject(FeedViewModel())
                     } label: {
                         Image("app.plus")

@@ -7,13 +7,15 @@
 
 import SwiftUI
 import Combine
+import PhotorySDK
 
 // NOTE: 실제 데이터를 viewModel로 연결하여 사용합니다.
 class HomeBodyViewModel: ObservableObject {
+    @Published var rooms: [Room] = []
     /// HomeBodyFloatingView를 띄우는 변수
-    @Published var isShowingFloatingView: Bool = false
+    @Published var showsFloatingView: Bool = false
     /// HomeBodyPopUpView를 띄우는 변수
-    @Published var isShowingPopUpView: Bool = false
+    @Published var showsPopUpView: Bool = false
     /// HomeBodyPopUpView의 타입을 정하는 변수
     var popUpType: PopUpType = .create
     
@@ -43,8 +45,50 @@ class HomeBodyViewModel: ObservableObject {
     
     /// PopView가 나타나 있다면 FloatingView는 나타나지 않는 로직을 구현하는 함수
     func showingFloatingView() {
-        isShowingFloatingView = isShowingPopUpView
+        showsFloatingView = showsPopUpView
         ? false
         : true
+    }
+    
+    /// popUp 하단의 버튼을 클릭했을 때의 액션
+    func didTapConfirmButton(title: String, password: String) {
+        guard (4...12) ~= password.count else { return }
+        
+        switch popUpType {
+        case .join:
+            guard !title.isEmpty else { return }
+            // NOTE: - join
+            Photory.enterRoom(code: title, password: password) { result in
+                print("✅ join Success")
+                // NOTE: - fetchRoom
+                self.showsPopUpView = false
+                
+                Photory.fetchRoom { result in
+                    switch result {
+                    case .success(let response):
+                        self.rooms = response
+                    case .failure(_):
+                        print("🚨 error: fetchRoom Error")
+                    }
+                }
+            }
+        case .create:
+            guard (4...6) ~= title.count else { return }
+            
+            Photory.createRoom(title: title, password: password) { result in
+                print("✅ createRoom Success")
+                // NOTE: - fetchRoom
+                self.showsPopUpView = false
+                
+                Photory.fetchRoom { result in
+                    switch result {
+                    case .success(let response):
+                        self.rooms = response
+                    case .failure(_):
+                        print("🚨 error: fetchRoom Error")
+                    }
+                }
+            }
+        }
     }
 }

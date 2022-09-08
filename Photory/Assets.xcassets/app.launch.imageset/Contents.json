@@ -1,7 +1,7 @@
 {
   "images" : [
     {
-      "filename" : "splash screen.png",
+      "filename" : "photoryLaunchScreen.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
